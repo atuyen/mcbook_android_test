@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llSearchBar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/margin_content"
+    android:background="@drawable/bg_btn_search"
+    android:focusableInTouchMode="true"
+    android:gravity="center"
+    android:padding="@dimen/margin_layout">
+
+    <ImageView
+        android:id="@+id/imgLeft"
+        style="@style/iconSmall"
+        android:layout_marginRight="@dimen/margin_content"
+        app:srcCompat="@drawable/ic_search" />
+
+    <com.bon.customview.edittext.ExtEditText
+        android:id="@+id/edtSearch"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"
+        android:hint="@string/search_book"
+        android:imeOptions="actionSearch"
+        android:inputType="text"
+        android:maxLines="1"
+        android:textColor="@color/color_black"
+        android:textColorHint="@color/colorTextHint"
+        android:textSize="@dimen/text_medium" />
+
+    <ImageView
+        android:id="@+id/imgRight"
+        style="@style/iconSmall"
+        android:layout_marginRight="@dimen/margin_content"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/ic_qr_code" />
+
+</LinearLayout>

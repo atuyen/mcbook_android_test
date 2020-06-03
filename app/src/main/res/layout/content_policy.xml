@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/margin_content"
+    android:paddingLeft="@dimen/margin_content"
+    android:paddingRight="@dimen/margin_content">
+
+    <com.bon.customview.textview.ExtTextView
+        android:id="@+id/content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorGray"
+        android:textSize="@dimen/text_medium"
+        app:textViewFontAssetName="@string/font_regular"
+        tool:text="12312312312321" />
+
+</LinearLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="EditTextFillWord">
+        <attr name="textAnswer" format="reference" />
+        <attr name="textCorrectAnswer" format="reference" />
+        <attr name="textId" format="reference" />
+        <attr name="textEnable" format="boolean" />
+    </declare-styleable>
+</resources>

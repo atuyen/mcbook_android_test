@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.mc.books">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <meta-data
+        android:name="com.onesignal.BadgeCount"
+        android:value="DISABLE" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.STORAGE" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+
+    <application
+        android:name="com.mc.application.AppContext"
+        android:allowBackup="false"
+        android:debuggable="true"
+        android:fullBackupContent="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="${applicationLabel}"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="HardcodedDebugMode">
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="${fabricApiKey}" />
+
+        <meta-data
+            android:name="com.onesignal.NotificationOpened.DEFAULT"
+            android:value="DISABLE" />
+        <meta-data
+            android:name="com.onesignal.NotificationOpenedReceiver.DEFAULT"
+            android:value="DISABLE" />
+
+
+        <activity
+            android:name=".activity.SplashActivity"
+            android:label="${applicationLabel}"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activity.MainActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="${applicationLabel}"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".activity.InStructionActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="${applicationLabel}"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name="com.mc.common.activities.AloneFragmentActivity"
+            android:label="${applicationLabel}"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".activity.SignInActivity"
+            android:label="${applicationLabel}"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter android:label="${applicationLabel}">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="oauth2Callback"
+                    android:scheme="com.mc.books"
+                    tools:ignore="AppLinkUrlError" />
+                <data
+                    android:host="oauth2Callback"
+                    android:scheme="com.mc.books.debug"
+                    tools:ignore="AppLinkUrlError" />
+                <data
+                    android:host="oauth2Callback"
+                    android:scheme="com.mc.books.beta"
+                    tools:ignore="AppLinkUrlError" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="com.mc.customizes.audioPlayer.service.MediaService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <receiver android:name="com.mc.customizes.audioPlayer.receiver.CallReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PHONE_STATE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:enabled="true"
+            android:name=".services.KillAppService"
+            android:exported="false"
+            android:stopWithTask="false" />
+
+        <service android:name="org.jboss.aerogear.android.authorization.oauth2.OAuth2AuthzService" />
+    </application>
+</manifest>

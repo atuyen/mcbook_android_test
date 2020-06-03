@@ -1,0 +1,18 @@
+            // Item Decorator:
+            rvProduct.addItemDecoration(new DividerItemDecoration(getResources().getDrawable(R.drawable.divider)));
+            rvProduct.setItemAnimator(new FadeInLeftAnimator());
+
+            LinearLayoutManager linearLayoutManager = new LinearLayoutManager(mainActivity, LinearLayoutManager.VERTICAL, false);
+            rvProduct.setLayoutManager(linearLayoutManager);
+            rvProduct.setHasFixedSize(false);
+            rvProduct.addOnScrollListener(new EndlessRecyclerViewScrollListener(linearLayoutManager) {
+                @Override
+                public void onLoadMore(int pageNumber, int totalItemsCount) {
+                    try {
+                            page = pageNumber;
+                            loadData();
+                    } catch (Exception exception) {
+                        Logger.e(TAG, exception.getMessage());
+                    }
+                }
+            });

@@ -1,0 +1,45 @@
+apply plugin: 'com.android.library'
+apply plugin: 'jacoco-android'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        multiDexEnabled true
+    }
+
+    buildTypes {
+        debug {
+            testCoverageEnabled true
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/ASL-2.0.txt'
+        exclude 'META-INF/LGPL-3.0.txt'
+        exclude 'META-INF/INDEX.LIST'
+        exclude 'APK META-INF/io.netty.versions.properties'
+        exclude 'META-INF/io.netty.versions.properties'
+    }
+
+    lintOptions {
+        disable 'InvalidPackage' //aerogear-crypto includes a namespace that isn't exposed by our APIs
+    }
+}
+
+dependencies {
+    implementation 'org.jboss.aerogear:aerogear-android-store:4.0.0'
+    implementation ('org.jboss.aerogear:aerogear-android-pipe:4.0.0') {
+        exclude group: 'com.android.support', module: "support-v4"
+    }
+}
+

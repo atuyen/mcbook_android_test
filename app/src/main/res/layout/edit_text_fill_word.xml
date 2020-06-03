@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/margin_layout"
+    android:layout_marginRight="@dimen/margin_layout"
+    android:layout_marginTop="@dimen/margin_content"
+    android:orientation="horizontal">
+
+    <com.bon.customview.textview.ExtTextView
+        android:id="@+id/extIdAnwser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/margin_content"
+        android:textColor="@color/colorOrange"
+        android:textSize="@dimen/text_medium"
+        tool:text="(1)" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.bon.customview.edittext.ExtEditText
+            android:id="@+id/edtAnswer1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:background="@null"
+            android:ellipsize="end"
+            android:lines="1"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="@color/colorTextGray"
+            android:textSize="@dimen/text_medium"
+            app:editTextFontAssetName="@string/font_regular"
+            tool:text="wrong" />
+
+        <com.bon.customview.textview.ExtTextView
+            android:id="@+id/tvAnswer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:background="@null"
+            android:ellipsize="end"
+            android:lines="1"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="@color/colorTextGray"
+            android:textSize="@dimen/text_medium"
+            android:visibility="gone"
+            app:editTextFontAssetName="@string/font_regular"
+            tool:text="wrong" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="@dimen/margin_content"
+            android:background="@color/colorBlack" />
+
+        <com.bon.customview.edittext.ExtEditText
+            android:id="@+id/edtCorrectAnswer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="@dimen/margin_content"
+            android:background="@null"
+            android:ellipsize="end"
+            android:lines="1"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="@color/colorGreen"
+            android:textSize="@dimen/text_medium"
+            android:visibility="gone"
+            app:editTextFontAssetName="@string/font_regular"
+            tool:text="correct" />
+
+        <View
+            android:id="@+id/viewCorrectAnswer"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="@dimen/margin_content"
+            android:background="@color/colorBlack"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</LinearLayout>

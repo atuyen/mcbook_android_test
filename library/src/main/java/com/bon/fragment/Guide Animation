@@ -1,0 +1,159 @@
+public class ExampleFragment extends Fragment {
+
+    @AnimationStyle
+    private static int sAnimationStyle = CUBE;
+
+    @Bind(R.id.textAnimationStyle)
+    TextView mTextAnimationStyle;
+
+    public static ExampleFragment newInstance(@AnimationDirection int direction) {
+        ExampleFragment f = new ExampleFragment();
+        f.setArguments(new Bundle());
+        f.getArguments().putInt("direction", direction);
+        return f;
+    }
+
+    @Nullable
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.content_anim, null);
+        int color = Color.rgb((int) Math.floor(Math.random() * 128) + 64,
+                              (int) Math.floor(Math.random() * 128) + 64,
+                              (int) Math.floor(Math.random() * 128) + 64);
+        view.setBackgroundColor(color);
+        ButterKnife.bind(this, view);
+        setAnimationStyleText();
+        return view;
+    }
+
+    @Override
+    public Animation onCreateAnimation(int transit, boolean enter, int nextAnim) {
+        switch (sAnimationStyle) {
+            case MOVE:
+                switch (getArguments().getInt("direction")) {
+                    case UP:
+                        return MoveAnimation.create(MoveAnimation.UP, enter, DURATION);
+                    case DOWN:
+                        return MoveAnimation.create(MoveAnimation.DOWN, enter, DURATION);
+                    case LEFT:
+                        return MoveAnimation.create(MoveAnimation.LEFT, enter, DURATION);
+                    case RIGHT:
+                        return MoveAnimation.create(MoveAnimation.RIGHT, enter, DURATION);
+                }
+                break;
+            case CUBE:
+                switch (getArguments().getInt("direction")) {
+                    case UP:
+                        return CubeAnimation.create(CubeAnimation.UP, enter, DURATION);
+                    case DOWN:
+                        return CubeAnimation.create(CubeAnimation.DOWN, enter, DURATION);
+                    case LEFT:
+                        return CubeAnimation.create(CubeAnimation.LEFT, enter, DURATION);
+                    case RIGHT:
+                        return CubeAnimation.create(CubeAnimation.RIGHT, enter, DURATION);
+                }
+                break;
+            case FLIP:
+                switch (getArguments().getInt("direction")) {
+                    case UP:
+                        return FlipAnimation.create(FlipAnimation.UP, enter, DURATION);
+                    case DOWN:
+                        return FlipAnimation.create(FlipAnimation.DOWN, enter, DURATION);
+                    case LEFT:
+                        return FlipAnimation.create(FlipAnimation.LEFT, enter, DURATION);
+                    case RIGHT:
+                        return FlipAnimation.create(FlipAnimation.RIGHT, enter, DURATION);
+                }
+                break;
+            case PUSHPULL:
+                switch (getArguments().getInt("direction")) {
+                    case UP:
+                        return PushPullAnimation.create(PushPullAnimation.UP, enter, DURATION);
+                    case DOWN:
+                        return PushPullAnimation.create(PushPullAnimation.DOWN, enter, DURATION);
+                    case LEFT:
+                        return PushPullAnimation.create(PushPullAnimation.LEFT, enter, DURATION);
+                    case RIGHT:
+                        return PushPullAnimation.create(PushPullAnimation.RIGHT, enter, DURATION);
+                }
+                break;
+            case SIDES:
+                switch (getArguments().getInt("direction")) {
+                    case UP:
+                        return SidesAnimation.create(SidesAnimation.UP, enter, DURATION);
+                    case DOWN:
+                        return SidesAnimation.create(SidesAnimation.DOWN, enter, DURATION);
+                    case LEFT:
+                        return SidesAnimation.create(SidesAnimation.LEFT, enter, DURATION);
+                    case RIGHT:
+                        return SidesAnimation.create(SidesAnimation.RIGHT, enter, DURATION);
+                }
+                break;
+            case CUBEMOVE:
+                switch (getArguments().getInt("direction")) {
+                    case UP:
+                        return enter ? MoveAnimation.create(MoveAnimation.UP, enter, DURATION).fading(0.3f, 1.0f) :
+                                CubeAnimation.create(CubeAnimation.UP, enter, DURATION).fading(1.0f, 0.3f);
+                    case DOWN:
+                        return enter ? MoveAnimation.create(MoveAnimation.DOWN, enter, DURATION).fading(0.3f, 1.0f) :
+                                CubeAnimation.create(CubeAnimation.DOWN, enter, DURATION).fading(1.0f, 0.3f);
+                    case LEFT:
+                        return enter ? MoveAnimation.create(MoveAnimation.LEFT, enter, DURATION).fading(0.3f, 1.0f) :
+                                CubeAnimation.create(CubeAnimation.LEFT, enter, DURATION).fading(1.0f, 0.3f);
+                    case RIGHT:
+                        return enter ? MoveAnimation.create(MoveAnimation.RIGHT, enter, DURATION).fading(0.3f, 1.0f) :
+                                CubeAnimation.create(CubeAnimation.RIGHT, enter, DURATION).fading(1.0f, 0.3f);
+                }
+                break;
+            case MOVECUBE:
+                switch (getArguments().getInt("direction")) {
+                    case UP:
+                        return enter ? CubeAnimation.create(CubeAnimation.UP, enter, DURATION).fading(0.3f, 1.0f) :
+                                MoveAnimation.create(MoveAnimation.UP, enter, DURATION).fading(1.0f, 0.3f);
+                    case DOWN:
+                        return enter ? CubeAnimation.create(CubeAnimation.DOWN, enter, DURATION).fading(0.3f, 1.0f) :
+                                MoveAnimation.create(MoveAnimation.DOWN, enter, DURATION).fading(1.0f, 0.3f);
+                    case LEFT:
+                        return enter ? CubeAnimation.create(CubeAnimation.LEFT, enter, DURATION).fading(0.3f, 1.0f) :
+                                MoveAnimation.create(MoveAnimation.LEFT, enter, DURATION).fading(1.0f, 0.3f);
+                    case RIGHT:
+                        return enter ? CubeAnimation.create(CubeAnimation.RIGHT, enter, DURATION).fading(0.3f, 1.0f) :
+                                MoveAnimation.create(MoveAnimation.RIGHT, enter, DURATION).fading(1.0f, 0.3f);
+                }
+                break;
+            case PUSHMOVE:
+                switch (getArguments().getInt("direction")) {
+                    case UP:
+                        return enter ? MoveAnimation.create(MoveAnimation.UP, enter, DURATION) :
+                                PushPullAnimation.create(PushPullAnimation.UP, enter, DURATION);
+                    case DOWN:
+                        return enter ? MoveAnimation.create(MoveAnimation.DOWN, enter, DURATION) :
+                                PushPullAnimation.create(PushPullAnimation.DOWN, enter, DURATION);
+                    case LEFT:
+                        return enter ? MoveAnimation.create(MoveAnimation.LEFT, enter, DURATION) :
+                                PushPullAnimation.create(PushPullAnimation.LEFT, enter, DURATION);
+                    case RIGHT:
+                        return enter ? MoveAnimation.create(MoveAnimation.RIGHT, enter, DURATION) :
+                                PushPullAnimation.create(PushPullAnimation.RIGHT, enter, DURATION);
+                }
+                break;
+            case MOVEPULL:
+                switch (getArguments().getInt("direction")) {
+                    case UP:
+                        return enter ? PushPullAnimation.create(PushPullAnimation.UP, enter, DURATION) :
+                                MoveAnimation.create(MoveAnimation.UP, enter, DURATION).fading(1.0f, 0.3f);
+                    case DOWN:
+                        return enter ? PushPullAnimation.create(PushPullAnimation.DOWN, enter, DURATION) :
+                                MoveAnimation.create(MoveAnimation.DOWN, enter, DURATION).fading(1.0f, 0.3f);
+                    case LEFT:
+                        return enter ? PushPullAnimation.create(PushPullAnimation.LEFT, enter, DURATION) :
+                                MoveAnimation.create(MoveAnimation.LEFT, enter, DURATION).fading(1.0f, 0.3f);
+                    case RIGHT:
+                        return enter ? PushPullAnimation.create(PushPullAnimation.RIGHT, enter, DURATION) :
+                                MoveAnimation.create(MoveAnimation.RIGHT, enter, DURATION).fading(1.0f, 0.3f);
+                }
+                break;
+        }
+        return null;
+    }
+}

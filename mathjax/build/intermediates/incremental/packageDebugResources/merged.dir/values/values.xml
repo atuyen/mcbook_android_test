@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MathJaxView">
+        <attr name="android:gravity"/>
+        <attr format="boolean" name="verticalScrollbarsEnabled"/>
+        <attr format="boolean" name="horizontalScrollbarsEnabled"/>
+        <attr format="enum" name="input">
+            <enum name="TeX" value="0"/>
+            <enum name="MathML" value="1"/>
+            <enum name="AsciiMath" value="2"/>
+        </attr>
+        <attr format="enum" name="output">
+            <enum name="SVG" value="0"/>
+            <enum name="HTML_CSS" value="1"/>
+            <enum name="CommonHTML" value="2"/>
+            <enum name="NativeMML" value="3"/>
+        </attr>
+        <attr format="integer" name="outputScale"/>
+        <attr format="integer" name="minScaleAdjust"/>
+        <attr format="boolean" name="automaticLinebreaks"/>
+        <attr format="integer" name="blacker"/>
+
+    </declare-styleable>
+</resources>

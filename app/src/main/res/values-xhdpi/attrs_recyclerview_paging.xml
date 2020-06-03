@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ExtRecyclerView">
+        <attr name="rvSwipeRefreshEnable" format="boolean" />
+        <attr name="rvSwipeRefreshIndicatorColor" format="color" />
+        <attr name="rvScrollbarVisible" format="boolean" />
+        <attr name="rvDividerColor" format="color" />
+        <attr name="rvDividerHeight" format="dimension" />
+        <attr name="rvNoDataMessage" format="string" />
+    </declare-styleable>
+</resources>

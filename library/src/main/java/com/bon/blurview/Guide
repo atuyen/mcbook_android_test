@@ -1,0 +1,18 @@
+Blurry.with(mContext)
+  .radius(10)
+  .sampling(8)
+  .color(Color.argb(66, 255, 255, 0))
+  .async()
+  .animate(500)
+  .onto(rootView);
+
+  Functions
+
+  Overlay
+
+  Parent must be ViewGroup
+
+  Blurry.with(mContext).radius(25).sampling(2).onto((ViewGroup) rootView);
+  Into
+
+  Blurry.with(mContext).capture(view).into(imageView);

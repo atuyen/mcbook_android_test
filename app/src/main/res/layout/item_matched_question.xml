@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/matched_height"
+    android:layout_marginBottom="@dimen/margin_content"
+    android:layout_marginLeft="@dimen/margin_layout"
+    android:layout_marginRight="@dimen/margin_layout"
+    android:layout_marginTop="@dimen/margin_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/llLeft"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_border_left_yellow"
+            android:orientation="horizontal">
+
+            <com.bon.customview.textview.ExtTextView
+                android:id="@+id/txtMatchingContentLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|left"
+                android:ellipsize="end"
+                android:maxLines="4"
+                android:padding="@dimen/margin_content"
+                android:textColor="@color/colorTextGray"
+                android:textSize="@dimen/text_medium"
+                app:textViewFontAssetName="@string/font_regular"
+                tool:text="asddsa" />
+
+            <de.timfreiheit.mathjax.android.MathJaxView
+                android:id="@+id/mathjaxContentLeft"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:visibility="gone"
+                app:automaticLinebreaks="false"
+                app:input="TeX"
+                app:output="SVG" />
+
+            <ImageView
+                android:id="@+id/imgMatchingContentLeft"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:scaleType="fitXY"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlRight"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bg_border_right_yellow">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <com.bon.customview.textview.ExtTextView
+                    android:id="@+id/txtMatchingContentRight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|left"
+                    android:ellipsize="end"
+                    android:maxLines="4"
+                    android:padding="@dimen/padding_layout"
+                    android:textColor="@color/colorTextGray"
+                    android:textSize="@dimen/text_medium"
+                    app:textViewFontAssetName="@string/font_regular"
+                    tool:text="asddsa" />
+
+                <de.timfreiheit.mathjax.android.MathJaxView
+                    android:id="@+id/mathjaxContentRight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:visibility="gone"
+                    app:automaticLinebreaks="false"
+                    app:input="TeX"
+                    app:output="SVG" />
+
+                <ImageView
+                    android:id="@+id/imgMatchingContentRight"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:scaleType="fitXY"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <com.bon.customview.button.ExtButton
+                android:id="@+id/btnAnswer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/bg_green"
+                android:paddingLeft="@dimen/margin_layout"
+                android:paddingRight="@dimen/margin_layout"
+                android:text="@string/result_1"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_medium"
+                android:visibility="gone"
+                app:buttonFontAssetName="@string/font_regular" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/viewLine"
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:background="@color/colorOrangeDialog" />
+
+    <ImageView
+        android:id="@+id/imgBreak"
+        android:layout_width="@dimen/icon_small_2x"
+        android:layout_height="@dimen/icon_small_2x"
+        android:layout_centerInParent="true"
+        android:src="@drawable/ic_close" />
+
+</RelativeLayout>

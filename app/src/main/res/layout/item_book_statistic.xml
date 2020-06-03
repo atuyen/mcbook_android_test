@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/margin_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorGradient"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin_content">
+
+        <ImageView
+            android:id="@+id/imgPictureBook"
+            android:layout_width="@dimen/img_statistic_width"
+            android:layout_height="@dimen/img_statistic_height"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_default_book" />
+
+        <com.bon.customview.textview.ExtTextView
+            android:id="@+id/txtBookName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/margin_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/colorTextGray"
+            android:textSize="@dimen/text_medium"
+            app:textViewFontAssetName="@string/font_bold"
+            tool:text="Tiếng anh giao tiếp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorOrangeOpacity"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <com.bon.customview.textview.ExtTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/study_time"
+                android:textColor="@color/colorTextGray"
+                android:textSize="@dimen/text_content"
+                app:textViewFontAssetName="@string/font_regular" />
+
+            <com.bon.customview.textview.ExtTextView
+                android:id="@+id/txtStudyTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:textColor="@color/colorOrange"
+                android:textSize="@dimen/text_content"
+                app:textViewFontAssetName="@string/font_bold"
+                tool:text="20 ngày" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <com.bon.customview.textview.ExtTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/sumary_point"
+                android:textColor="@color/colorTextGray"
+                android:textSize="@dimen/text_content"
+                app:textViewFontAssetName="@string/font_regular" />
+
+            <com.bon.customview.textview.ExtTextView
+                android:id="@+id/txtSumaryPoint"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:textColor="@color/colorOrange"
+                android:textSize="@dimen/text_content"
+                app:textViewFontAssetName="@string/font_bold"
+                tool:text="123321" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <com.bon.customview.textview.ExtTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="@string/finished"
+                android:textColor="@color/colorTextGray"
+                android:textSize="@dimen/text_content"
+                app:textViewFontAssetName="@string/font_regular" />
+
+            <ProgressBar
+                android:id="@+id/bookProgress"
+                style="@style/ProgressBarBlue"
+                android:layout_width="0dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/margin_layout"
+                android:layout_weight="1.5"
+                tool:progress="50" />
+
+            <com.bon.customview.textview.ExtTextView
+                android:id="@+id/txtProgress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:textColor="@color/colorOrange"
+                android:textSize="@dimen/text_content"
+                app:textViewFontAssetName="@string/font_bold"
+                tool:text="5%" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

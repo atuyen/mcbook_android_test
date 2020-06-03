@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/llContaner"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgBookAvatar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/margin_content"
+            android:src="@drawable/ic_default_avatar"
+            app:civ_border_color="@color/colorWhite"
+            app:civ_border_width="1dp" />
+
+
+        <com.bon.customview.textview.ExtTextView
+            android:id="@+id/txtTitleBook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_toRightOf="@id/imgBookAvatar"
+            android:ellipsize="middle"
+            android:singleLine="true"
+            android:textColor="@color/colorTextGray"
+            android:textSize="@dimen/text_title"
+            app:textViewFontAssetName="@string/font_regular"
+            tools:text="Cuốn sách Học Tiếng Anh cơ bản đã được cập nhật thông tin mới" />
+
+        <com.bon.customview.textview.ExtTextView
+            android:id="@+id/txtTitleTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtTitleBook"
+            android:layout_gravity="center_vertical"
+            android:layout_toRightOf="@id/imgBookAvatar"
+            android:ellipsize="middle"
+            android:singleLine="true"
+            android:textColor="@color/colorTextGray"
+            android:textSize="@dimen/text_content"
+            app:textViewFontAssetName="@string/font_regular"
+            tools:text="2 giờ trước" />
+
+    </RelativeLayout>
+</LinearLayout>

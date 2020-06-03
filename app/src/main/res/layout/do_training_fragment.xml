@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_yellow"
+    android:orientation="vertical">
+
+
+    <com.bon.customview.textview.ExtTextView
+        android:id="@+id/emptyTraining"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/info_record"
+        android:textColor="@color/colorTextGray"
+        android:textSize="@dimen/text_title"
+        android:visibility="gone"
+        app:textViewFontAssetName="@string/font_regular" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_layout">
+
+        <com.mc.customizes.customTab.CustomTab
+            android:id="@+id/tabListen"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:tabActive="true"
+            app:tabText="@string/do_training_1" />
+
+        <com.mc.customizes.customTab.CustomTab
+            android:id="@+id/tabPractice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:tabActive="false"
+            app:tabText="@string/do_training_2" />
+
+        <com.mc.customizes.customTab.CustomTab
+            android:id="@+id/tabRecord"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:tabActive="false"
+            app:tabText="@string/do_training_3" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llRole"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/padding_layout"
+        android:background="@drawable/bg_gradient_blue"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_content">
+
+        <com.bon.customview.textview.ExtTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/choose_role"
+            android:textColor="@color/color_white"
+            app:textViewFontAssetName="@string/font_bold" />
+
+        <com.mc.customizes.edittexts.TextInputApp
+            android:id="@+id/etRole"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/padding_layout"
+            android:background="@drawable/bg_null_gray_selector"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            app:textInputAppEnable="false"
+            app:textInputAppIcon="@drawable/ic_arrow_down_white"
+            app:textInputTextColor="@color/colorWhite" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/padding_layout"
+        android:layout_weight="1"
+        android:background="@drawable/bg_white_exam"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recySubTitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recySubTitlePractice"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <bg.player.com.playerbackground.module.AudioPlayerBG
+        android:id="@+id/audioBG"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:apbg_UItype="1"
+        app:apbg_autoplay="false" />
+
+    <LinearLayout
+        android:id="@+id/llTabRecord"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/bg_boder_top"
+        android:gravity="center">
+
+        <LinearLayout
+            android:id="@+id/llrecord"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/imgRecord"
+                android:layout_width="@dimen/icon_medium"
+                android:layout_height="@dimen/icon_medium"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_record" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorDarkGray" />
+
+        <LinearLayout
+            android:id="@+id/llListRecord"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/imgListRecord"
+                android:layout_width="@dimen/icon_medium"
+                android:layout_height="@dimen/icon_medium"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_playlist_record" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

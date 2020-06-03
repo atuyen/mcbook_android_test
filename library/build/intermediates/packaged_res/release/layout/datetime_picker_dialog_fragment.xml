@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_layout">
+
+        <com.bon.customview.textview.ExtTextView
+            android:id="@+id/tvCancel"
+            style="@style/StyleTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_null_gray_selector"
+            android:text="@string/cancel" />
+
+        <com.bon.customview.textview.ExtTextView
+            style="@style/StyleTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5" />
+
+        <com.bon.customview.textview.ExtTextView
+            android:id="@+id/tvSave"
+            style="@style/StyleTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_null_gray_selector"
+            android:text="@string/done"
+            android:textColor="@color/color_white" />
+    </TableRow>
+
+    <DatePicker
+        android:id="@+id/dpDatePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner" />
+
+    <TimePicker
+        android:id="@+id/tpTimePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:timePickerMode="spinner" />
+</LinearLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rlRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorDialog">
+
+    <RelativeLayout
+        android:id="@+id/llroot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="40dp"
+        android:paddingBottom="@dimen/margin_dialog">
+
+        <ImageView
+            android:id="@+id/imgGirl"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/ic_girl" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgGirl"
+            android:layout_marginTop="-25dp"
+            android:background="@drawable/ic_dialog"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/margin_dialog"
+            android:paddingLeft="@dimen/margin_content"
+            android:paddingRight="@dimen/margin_content"
+            android:paddingTop="@dimen/margin_dialog">
+
+            <com.bon.customview.textview.ExtTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/notice"
+                android:textColor="@color/colorBrown"
+                android:textSize="@dimen/text_large"
+                app:textViewFontAssetName="@string/font_bold" />
+
+            <com.bon.customview.textview.ExtTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/notice_content"
+                android:textColor="@color/colorTextGray"
+                android:textSize="@dimen/text_medium"
+                app:textViewFontAssetName="@string/font_regular" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
+

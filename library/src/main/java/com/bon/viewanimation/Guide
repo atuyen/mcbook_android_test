@@ -1,0 +1,7 @@
+ YoYo.with(Techniques.Tada)
+                        .duration(700)
+                        .playOn(findViewById(R.id.edit_area));
+
+ YoYo.with(Techniques.Shake).playOn(findViewById(R.id.edit_area2));
+
+ https://github.com/daimajia/AndroidViewAnimations

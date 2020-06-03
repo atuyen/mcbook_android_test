@@ -1,0 +1,28 @@
+<resources>
+    <!--Dialog Animation-->
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_up</item>
+        <item name="android:windowExitAnimation">@anim/slide_down</item>
+    </style>
+
+    <style name="StyleTitle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/font_size_title</item>
+        <item name="android:textColor">@color/color_black</item>
+        <item name="android:padding">@dimen/padding_content</item>
+    </style>
+
+    <style name="StyleContent">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/font_size_content</item>
+        <item name="android:textColor">@color/color_black</item>
+        <item name="android:padding">@dimen/padding_content</item>
+    </style>
+
+    <style name="StyleContentBold" parent="StyleContent">
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>

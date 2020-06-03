@@ -1,0 +1,191 @@
+{
+  "project_info": {
+    "project_number": "441386787285",
+    "firebase_url": "https://mcbook-ver2.firebaseio.com",
+    "project_id": "mcbook-ver2",
+    "storage_bucket": "mcbook-ver2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:441386787285:android:ae43196406ea91e9",
+        "android_client_info": {
+          "package_name": "com.mc.books"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "441386787285-q6updkml9b7kc4u5m0qrk281vt7fbj13.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mc.books",
+            "certificate_hash": "37724edd63e5d423c0046e054b35f4ee7a107e50"
+          }
+        },
+        {
+          "client_id": "441386787285-9mmd3sreolourp8l45lu05n4cuket3ui.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mc.books",
+            "certificate_hash": "4cf1d8c962f8273e9e12a0f12922aa46d6f60610"
+          }
+        },
+        {
+          "client_id": "441386787285-q2nqpfoi8j461avcpb67aipeok8ov0st.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mc.books",
+            "certificate_hash": "451070c89b5ea2b693d585cb6c78078deba0c761"
+          }
+        },
+        {
+          "client_id": "441386787285-jmjfm1elq4cu3eun56mdrpn35v1e7ief.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-b8pmEtKmKzpVdbn5GTyyFcPOUkt8u0Q"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "441386787285-jmjfm1elq4cu3eun56mdrpn35v1e7ief.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:441386787285:android:cdb473feedacf1c6",
+        "android_client_info": {
+          "package_name": "com.mc.books.beta"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "441386787285-dbps053t2hnss3gq3rf97mjqp3nl806l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mc.books.beta",
+            "certificate_hash": "451070c89b5ea2b693d585cb6c78078deba0c761"
+          }
+        },
+        {
+          "client_id": "441386787285-e55jfn664o3d5nqkt6pabic2mgmb069v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mc.books.beta",
+            "certificate_hash": "4cf1d8c962f8273e9e12a0f12922aa46d6f60610"
+          }
+        },
+        {
+          "client_id": "441386787285-mr9trvc0kmmmqr0uhr35f4utca0l674r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mc.books.beta",
+            "certificate_hash": "37724edd63e5d423c0046e054b35f4ee7a107e50"
+          }
+        },
+        {
+          "client_id": "441386787285-jmjfm1elq4cu3eun56mdrpn35v1e7ief.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-b8pmEtKmKzpVdbn5GTyyFcPOUkt8u0Q"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "441386787285-jmjfm1elq4cu3eun56mdrpn35v1e7ief.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:441386787285:android:8c120f20897528f0",
+        "android_client_info": {
+          "package_name": "com.mc.books.debug"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "441386787285-4dga2vee16q7cmtjh6o65fp5bogfti21.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mc.books.debug",
+            "certificate_hash": "451070c89b5ea2b693d585cb6c78078deba0c761"
+          }
+        },
+        {
+          "client_id": "441386787285-tbfeioduoc3mai8ua8n9gu34kga9thqf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mc.books.debug",
+            "certificate_hash": "4cf1d8c962f8273e9e12a0f12922aa46d6f60610"
+          }
+        },
+        {
+          "client_id": "441386787285-p48hh2csu79ordvqjnv0ebeh32g3ch23.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mc.books.debug",
+            "certificate_hash": "37724edd63e5d423c0046e054b35f4ee7a107e50"
+          }
+        },
+        {
+          "client_id": "441386787285-jmjfm1elq4cu3eun56mdrpn35v1e7ief.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-b8pmEtKmKzpVdbn5GTyyFcPOUkt8u0Q"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "441386787285-jmjfm1elq4cu3eun56mdrpn35v1e7ief.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

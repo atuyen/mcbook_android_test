@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/margin_content"
+    android:layout_marginTop="@dimen/margin_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgAuthorAvatar"
+        android:layout_width="@dimen/avatar_normal"
+        android:layout_height="@dimen/avatar_normal"
+        android:src="@drawable/ic_default_avatar"
+        app:civ_border_color="@color/colorWhite"
+        app:civ_border_width="1dp" />
+
+    <com.bon.customview.textview.ExtTextView
+        android:id="@+id/txtAuthorName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_content"
+        android:textColor="@color/colorDarkBlue"
+        android:textSize="@dimen/text_medium"
+        app:textViewFontAssetName="@string/font_bold"
+        tool:text="AAAAAAAA" />
+
+</LinearLayout>

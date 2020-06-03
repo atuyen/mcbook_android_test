@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="@dimen/margin_dialog">
+
+    <ImageView
+        android:layout_width="@dimen/img_dialog"
+        android:layout_height="@dimen/img_dialog"
+        app:srcCompat="@drawable/ic_finish_exam" />
+
+    <com.bon.customview.textview.ExtTextView
+        android:id="@+id/txtError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_large"
+        android:layout_marginLeft="@dimen/margin_layout"
+        android:layout_marginRight="@dimen/margin_layout"
+        android:layout_marginTop="@dimen/margin_large"
+        android:ems="1000"
+        android:gravity="center"
+        android:text="@string/finish_exam_confirm"
+        android:textAlignment="center"
+        android:textColor="@color/colorTextGray"
+        android:textSize="@dimen/text_medium"
+        app:textViewFontAssetName="@string/font_regular" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <com.bon.customview.button.ExtButton
+            android:id="@+id/btnCancel"
+            style="@style/btnDialogCancel"
+            android:text="@string/no"
+            app:buttonFontAssetName="@string/font_bold" />
+
+        <com.bon.customview.button.ExtButton
+            android:id="@+id/btnConfirm"
+            style="@style/btnDialogConfirm"
+            android:text="@string/yes"
+            app:buttonFontAssetName="@string/font_bold" />
+
+    </LinearLayout>
+
+</LinearLayout>

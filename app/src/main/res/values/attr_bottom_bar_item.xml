@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ItemBottomBar">
+        <attr name="bottomBarIconNormal" format="reference" />
+        <attr name="bottomBarIconActive" format="reference" />
+        <attr name="bottomBarActive" format="boolean" />
+        <attr name="isShowBadge" format="boolean" />
+    </declare-styleable>
+</resources>

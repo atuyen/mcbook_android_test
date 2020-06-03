@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/padding_content"
+    android:id="@+id/llRoot"
+    android:background="@drawable/bg_item_record"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgRecord"
+            android:layout_width="@dimen/icon_medium"
+            android:layout_height="@dimen/icon_medium"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/margin_content"
+            android:layout_marginTop="@dimen/padding_content"
+            android:src="@drawable/ic_phone_record"
+            app:civ_border_color="@color/colorWhite"
+            app:civ_border_width="1dp" />
+
+
+        <com.bon.customview.textview.ExtTextView
+            android:id="@+id/txtTitleRecord"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_toRightOf="@id/imgRecord"
+            android:ellipsize="middle"
+            android:singleLine="true"
+            android:textColor="@color/colorTextGray"
+            android:textSize="@dimen/text_title"
+            app:textViewFontAssetName="@string/font_regular"
+            tools:text="20_05_18_Ghi_am_01" />
+
+        <com.bon.customview.textview.ExtTextView
+            android:id="@+id/txtRole"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtTitleRecord"
+            android:layout_gravity="center_vertical"
+            android:layout_toRightOf="@id/imgRecord"
+            android:ellipsize="middle"
+            android:singleLine="true"
+            android:textColor="@color/colorDisable"
+            android:textSize="@dimen/text_content"
+            app:textViewFontAssetName="@string/font_regular"
+            tools:text="Vai trò: Elena" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtRole"
+            android:layout_toRightOf="@id/imgRecord">
+
+            <com.bon.customview.textview.ExtTextView
+                android:id="@+id/txtTimeRecord"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:ellipsize="middle"
+                android:singleLine="true"
+                android:textColor="@color/colorDisable"
+                android:textSize="@dimen/text_content"
+                app:textViewFontAssetName="@string/font_regular"
+                tools:text="1 phút trước" />
+
+
+            <com.bon.customview.textview.ExtTextView
+                android:id="@+id/txtLengthRecord"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:ellipsize="middle"
+                android:gravity="right"
+                android:singleLine="true"
+                android:textColor="@color/colorDisable"
+                android:textSize="@dimen/text_content"
+                app:textViewFontAssetName="@string/font_regular"
+                tools:text="02:12" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</LinearLayout>

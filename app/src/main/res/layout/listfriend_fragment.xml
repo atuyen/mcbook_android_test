@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_yellow_gradient_90">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_layout">
+
+            <com.bon.customview.button.ExtButton
+                android:id="@+id/btn_friend"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/icon_large"
+                android:layout_marginBottom="@dimen/margin_content"
+                android:layout_marginRight="@dimen/margin_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_btn_orange"
+                android:text="@string/friend"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_medium" />
+
+            <com.bon.customview.button.ExtButton
+                android:id="@+id/btn_member"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/icon_large"
+                android:layout_marginBottom="@dimen/margin_content"
+                android:layout_marginLeft="@dimen/margin_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_btn_white"
+                android:text="@string/member"
+                android:textAllCaps="false"
+                android:textColor="@color/colorTextGray"
+                android:textSize="@dimen/text_medium" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_content"
+            android:layout_marginLeft="@dimen/margin_content"
+            android:layout_marginRight="@dimen/margin_content">
+
+            <com.mc.customizes.searchbar.SearchBar
+                android:id="@+id/searchbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_content"
+                app:searchBarHint="@string/find_friend" />
+
+        </RelativeLayout>
+
+        <com.mc.customizes.recyclerview.ExtRecyclerView
+            android:id="@+id/rvMember"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/margin_content"
+            android:paddingRight="@dimen/margin_content"
+            android:visibility="gone" />
+
+        <com.mc.customizes.recyclerview.ExtRecyclerView
+            android:id="@+id/rvFriend"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/margin_content"
+            android:paddingRight="@dimen/margin_content" />
+
+
+    </LinearLayout>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/margin_small"
+        android:layout_marginRight="@dimen/padding_content"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:scaleType="center"
+        app:backgroundTint="#00FFFFFF"
+        app:elevation="0dp"
+        app:fabCustomSize="@dimen/icon_super_large"
+        app:fabSize="normal"
+        app:srcCompat="@drawable/ic_add_circle" />
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabFacebook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/margin_fab_1"
+        android:layout_marginRight="@dimen/padding_content"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:scaleType="center"
+        android:visibility="invisible"
+        app:maxImageSize="@dimen/icon_large_1"
+        app:backgroundTint="#00FFFFFF"
+        app:elevation="0dp"
+        app:fabCustomSize="@dimen/icon_super_large"
+        app:fabSize="normal"
+        app:srcCompat="@drawable/ic_facebook_circle" />
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabGoogle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/margin_fab_2"
+        android:layout_marginRight="@dimen/padding_content"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:scaleType="center"
+        android:visibility="invisible"
+        app:backgroundTint="#00FFFFFF"
+        app:elevation="0dp"
+        app:maxImageSize="@dimen/icon_large_1"
+        app:fabCustomSize="@dimen/icon_super_large"
+        app:fabSize="normal"
+        app:srcCompat="@drawable/ic_google_plus_circle" />
+
+</RelativeLayout>

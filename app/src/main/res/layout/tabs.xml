@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center">
+
+    <com.bon.customview.textview.ExtTextView
+        android:id="@+id/tvTab"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/button_height"
+        android:layout_marginLeft="@dimen/padding_layout"
+        android:layout_marginRight="@dimen/padding_layout"
+        android:textSize="@dimen/text_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        tool:text="hihi" />
+
+</LinearLayout>

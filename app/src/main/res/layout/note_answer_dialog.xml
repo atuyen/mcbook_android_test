@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_yellow_gradient_90"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/llActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_gravity="center_vertical"
+        android:background="@color/colorWhite">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="@dimen/margin_content"
+            android:layout_marginTop="@dimen/margin_content">
+
+            <ImageView
+                android:id="@+id/imgClose"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/margin_content"
+                android:src="@drawable/ic_arrow_right" />
+
+            <TextView
+                android:id="@+id/txtTitle"
+                style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/margin_dialog"
+                android:layout_marginRight="@dimen/margin_layout"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:text="@string/answer_result" />
+
+            <ImageView
+                android:layout_width="@dimen/statusbar_image_right"
+                android:layout_height="@dimen/statusbar_image_right"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/margin_content"
+                android:src="@drawable/ic_close_orange"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_layout"
+        android:padding="@dimen/margin_content">
+
+        <LinearLayout
+            android:id="@+id/llNoteAnswerRoot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/llNoteAnswer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:background="@drawable/bg_white"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/margin_layout"
+                    android:paddingLeft="@dimen/margin_content"
+                    android:paddingRight="@dimen/margin_content"
+                    android:paddingTop="@dimen/margin_layout"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/imgNoteAnswerContent"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_marginBottom="@dimen/margin_content"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/imgNoteAnswerMedia"
+                        android:layout_width="@dimen/image_media"
+                        android:layout_height="@dimen/image_media"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="@dimen/margin_content"
+                        android:src="@drawable/ic_audio_play"
+                        android:visibility="gone" />
+
+                    <com.bon.customview.textview.ExtTextView
+                        android:id="@+id/txtNoteAnswerContent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorTextGray"
+                        android:textSize="@dimen/text_medium"
+                        app:textViewFontAssetName="@string/font_regular"
+                        tool:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since... the ... 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum." />
+
+                    <de.timfreiheit.mathjax.android.MathJaxView
+                        android:id="@+id/noteMathjax"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:visibility="gone"
+                        app:automaticLinebreaks="true"
+                        app:input="TeX"
+                        app:output="SVG" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

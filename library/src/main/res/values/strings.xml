@@ -1,0 +1,54 @@
+<resources>
+    <!--FONT-->
+    <string name="font_italic">fonts/SF-Pro-Display-RegularItalic.otf</string>
+    <string name="font_bold">fonts/SF-Pro-Display-Bold.otf</string>
+    <string name="font_regular">fonts/SF-Pro-Display-Regular.otf</string>
+    <string name="font_black">fonts/SF-Pro-Display-Black.otf</string>
+    <string name="percent_label">%</string>
+
+    <!--APP-->
+    <string name="read_more">show more</string>
+    <string name="read_less">show less</string>
+    <string name="loading">loading...</string>
+    <string name="no_data">Data not found</string>
+
+    <!--Chart-->
+    <string name="double_tap_to_exit">Double tap to Exit!</string>
+    <string name="cancel">Cancel</string>
+    <string name="select_value">Select value</string>
+    <string name="search">Search</string>
+    <string name="done">Done</string>
+
+    <string name="day">Day</string>
+    <string name="month">Month</string>
+    <string name="year">Year</string>
+    <string name="hour">Hour</string>
+    <string name="minute">Minute</string>
+
+    <!--<string name="month_one">Jan</string>-->
+    <!--<string name="month_two">Feb</string>-->
+    <!--<string name="month_three">Mar</string>-->
+    <!--<string name="month_four">Apr</string>-->
+    <!--<string name="month_five">May</string>-->
+    <!--<string name="month_six">Jun</string>-->
+    <!--<string name="month_seven">Jul</string>-->
+    <!--<string name="month_eight">Aug</string>-->
+    <!--<string name="month_nice">Sep</string>-->
+    <!--<string name="month_ten">Oct</string>-->
+    <!--<string name="month_eleven">Nov</string>-->
+    <!--<string name="month_twelfth">Dec</string>-->
+    <string name="month_one">T1</string>
+    <string name="month_two">T2</string>
+    <string name="month_three">T3</string>
+    <string name="month_four">T4</string>
+    <string name="month_five">T5</string>
+    <string name="month_six">T6</string>
+    <string name="month_seven">T7</string>
+    <string name="month_eight">T8</string>
+    <string name="month_nice">T9</string>
+    <string name="month_ten">T10</string>
+    <string name="month_eleven">T11</string>
+    <string name="month_twelfth">T12</string>
+
+    <string name="app_name">Library</string>
+</resources>

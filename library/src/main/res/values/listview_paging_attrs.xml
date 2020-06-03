@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ExtPagingListView">
+        <attr name="swipeRefreshEnable" format="boolean" />
+        <attr name="swipeRefreshIndicatorColor" format="color" />
+        <attr name="scrollbarVisible" format="boolean" />
+        <attr name="dividerColor" format="color" />
+        <attr name="dividerHeight" format="dimension" />
+        <attr name="noDataMessage" format="string" />
+    </declare-styleable>
+</resources>

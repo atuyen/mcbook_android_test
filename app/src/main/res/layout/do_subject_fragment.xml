@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_yellow_gradient_90"
+    android:orientation="vertical">
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/svRoot"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_content"
+            android:layout_marginTop="@dimen/margin_content"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_content">
+
+            <com.bon.customview.textview.ExtTextView
+                android:id="@+id/txtDescriptionForm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_layout"
+                android:textColor="@color/colorTextGray"
+                android:textSize="@dimen/text_medium"
+                app:textViewFontAssetName="@string/font_regular"
+                tool:text="Chọn đáp án đúng" />
+
+            <LinearLayout
+                android:id="@+id/llMixQuestion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_layout"
+                android:background="@drawable/bg_white"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/margin_layout"
+                android:paddingLeft="@dimen/margin_content"
+                android:paddingRight="@dimen/margin_content"
+                android:paddingTop="@dimen/margin_layout"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/imgMixQuestionContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/image_content_height"
+                    android:layout_marginBottom="@dimen/margin_content"
+                    android:scaleType="fitXY"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/imgMixQuestionMedia"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/margin_content"
+                    android:src="@drawable/ic_audio_play"
+                    android:visibility="gone" />
+
+                <de.timfreiheit.mathjax.android.MathJaxView
+                    android:id="@+id/mixMathjax"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:visibility="gone"
+                    app:automaticLinebreaks="true"
+                    app:input="TeX"
+                    app:output="SVG" />
+
+
+                <com.bon.customview.textview.ExtTextView
+                    android:id="@+id/txtMixQuestionContent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorTextGray"
+                    android:textSize="@dimen/text_medium"
+                    app:textViewFontAssetName="@string/font_regular"
+                    tool:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since... the ... 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum." />
+
+                <com.bon.customview.textview.ExtTextView
+                    android:id="@+id/txtMixQuestionShowMore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margin_content"
+                    android:text="@string/show_more"
+                    android:textColor="@color/colorDarkBlue"
+                    android:textSize="@dimen/text_medium"
+                    android:visibility="gone"
+                    app:textViewFontAssetName="@string/font_regular" />
+
+            </LinearLayout>
+
+            <include layout="@layout/fill_word_game_fragment" />
+
+            <include layout="@layout/single_choose_fragment" />
+
+            <include layout="@layout/matching_fragment" />
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/llAnswer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_layout"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:layout_marginRight="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_layout"
+        android:background="@drawable/bg_btn_nagative">
+
+        <LinearLayout
+            android:id="@+id/llPreviousQuestion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingBottom="@dimen/margin_layout"
+            android:paddingTop="@dimen/margin_layout">
+
+            <ImageView
+                android:layout_width="@dimen/icon_tiny"
+                android:layout_height="@dimen/icon_tiny"
+                app:srcCompat="@drawable/ic_small_left_white" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorWhite" />
+
+        <LinearLayout
+            android:id="@+id/llCheckResult"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="2.5"
+            android:gravity="center">
+
+            <com.bon.customview.textview.ExtTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:text="@string/check_result"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_title"
+                app:textViewFontAssetName="@string/font_bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llNoteAnswer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="2.5"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <com.bon.customview.textview.ExtTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:text="@string/answer_result"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_title"
+                app:textViewFontAssetName="@string/font_bold" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/viewCheckResult"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorWhite" />
+
+        <LinearLayout
+            android:id="@+id/llNextQuestion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingBottom="@dimen/margin_layout"
+            android:paddingTop="@dimen/margin_layout">
+
+            <ImageView
+                android:layout_width="@dimen/icon_tiny"
+                android:layout_height="@dimen/icon_tiny"
+                app:srcCompat="@drawable/ic_small_right_white" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

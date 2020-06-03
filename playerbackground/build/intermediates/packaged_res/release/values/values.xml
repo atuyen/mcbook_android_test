@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <declare-styleable name="AudioPlayerBG">
+
+        <attr format="boolean" name="apbg_autoplay"/>
+        <attr format="integer" name="apbg_UItype"/>
+
+    </declare-styleable>
+    <dimen name="bvp_button_size">30dp</dimen>
+    <dimen name="bvp_button_size1">35dp</dimen>
+    <dimen name="bvp_content_inset">16dp</dimen>
+    <dimen name="bvp_content_inset_half">8dp</dimen>
+    <dimen name="bvp_content_inset_iconbuttons">2dp</dimen>
+    <dimen name="bvp_content_inset_less">1dp</dimen>
+    <dimen name="bvp_negative_inset_large">-8dp</dimen>
+    <dimen name="bvp_negative_inset_small">-2dp</dimen>
+    <dimen name="bvp_subtitle_size">20sp</dimen>
+    <dimen name="bvp_text_size_large">18sp</dimen>
+    <dimen name="bvp_text_size_medium">14sp</dimen>
+    <dimen name="bvp_text_size_small">10sp</dimen>
+    <string name="app_name">PlayerBackground</string>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+</resources>

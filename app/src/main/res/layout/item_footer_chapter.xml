@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:visibility="gone"
+    tool:visibility="visible">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="@dimen/padding_content"
+        android:layout_marginLeft="@dimen/padding_content"
+        android:layout_marginRight="@dimen/padding_content"
+        android:background="@color/color_line" />
+
+    <LinearLayout
+        android:id="@+id/llChapterFooter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/imgDownload"
+            style="@style/iconMedium"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/padding_content"
+            android:src="@drawable/ic_download"
+            android:visibility="gone"
+            tool:visibility="visible" />
+
+        <com.github.lzyzsd.circleprogress.DonutProgress
+            android:id="@+id/donut_progress"
+            android:layout_width="@dimen/progressbar_download"
+            android:layout_height="@dimen/progressbar_download"
+            android:visibility="gone"
+            app:donut_circle_starting_degree="270"
+            app:donut_text_size="0sp"
+            tool:donut_progress="30"
+            tool:visibility="visible" />
+
+        <com.bon.customview.textview.ExtTextView
+            android:id="@+id/txtDownload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/colorViolet"
+            android:textSize="@dimen/text_title"
+            tool:text="@string/download_chapter_footer" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TextInputApp">
+        <attr name="textInputAppLabel" format="reference" />
+        <attr name="textInputAppError" format="reference" />
+        <attr name="textInputAppHint" format="reference" />
+        <attr name="textInputAppContent" format="string" />
+        <attr name="textInputAppIcon" format="reference" />
+        <attr name="textInputAppEnable" format="boolean" />
+        <attr name="textInputTextColor" format="string" />
+        <attr name="android:inputType" />
+        <attr name="android:imeOptions" />
+    </declare-styleable>
+</resources>

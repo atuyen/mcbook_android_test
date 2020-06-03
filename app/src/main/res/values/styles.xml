@@ -1,0 +1,255 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="android:windowEnableSplitTouch">false</item>
+        <item name="android:splitMotionEvents">false</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:actionMenuTextColor">@color/colorOrange</item>
+        <item name="actionMenuTextColor">@color/colorOrange</item>
+        <item name="android:textColorPrimary">@color/colorOrange</item>
+        <item name="android:actionMenuTextAppearance">@style/ActionMenuText</item>
+    </style>
+
+    <style name="ActionMenuText">
+        <item name="android:textSize">@dimen/text_large</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!--font size-->
+    <style name="StyleTitle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/font_size_title</item>
+        <item name="android:textColor">@color/color_black</item>
+        <item name="android:padding">@dimen/padding_content</item>
+    </style>
+
+    <style name="StyleContent">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/text_medium</item>
+        <item name="android:textColor">@color/color_black</item>
+        <item name="android:padding">@dimen/padding_content</item>
+    </style>
+
+    <style name="StyleMenu" parent="StyleContent">
+        <item name="android:textSize">@dimen/font_size_menu</item>
+    </style>
+
+    <style name="StyleDescription" parent="StyleContent">
+        <item name="android:textSize">@dimen/text_small</item>
+    </style>
+
+    <style name="StyleDescriptionRed" parent="StyleDescription">
+        <item name="android:textColor">@color/color_red</item>
+        <item name="android:textSize">@dimen/text_small</item>
+    </style>
+
+    <!-- Padding style -->
+    <style name="paddingLayout">
+        <item name="android:padding">10dp</item>
+    </style>
+
+    <style name="marginLayout">
+        <item name="android:layout_margin">10dp</item>
+    </style>
+
+    <style name="marginItem">
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+    </style>
+
+    <style name="tabbarLinear">
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="tabbarImage">
+        <item name="android:layout_width">@dimen/bottom_icon</item>
+        <item name="android:layout_height">@dimen/bottom_icon</item>
+        <item name="android:layout_margin">@dimen/padding_content</item>
+        <item name="android:scaleType">fitCenter</item>
+    </style>
+
+    <style name="tabbarLine">
+        <item name="android:layout_width">@dimen/bottom_line_width</item>
+        <item name="android:layout_height">@dimen/bottom_line_height</item>
+        <item name="android:layout_marginBottom">3dp</item>
+        <item name="android:background">@color/colorDarkBlue</item>
+        <item name="android:visibility">visible</item>
+    </style>
+
+    <style name="CustomProgressBar" parent="android:Widget.ProgressBar.Horizontal">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:minHeight">@dimen/progress_bar_min_height</item>
+        <item name="android:maxHeight">@dimen/progress_bar_max_height</item>
+        <item name="android:layout_height">@dimen/progress_bar_height</item>
+    </style>
+
+    <style name="ProgressBarOrange" parent="CustomProgressBar">
+        <item name="android:progressDrawable">@drawable/custom_progress_bar_horizontal</item>
+    </style>
+
+    <style name="ProgressBarBlue" parent="CustomProgressBar">
+        <item name="android:progressDrawable">@drawable/custom_progress_bar_blue</item>
+    </style>
+
+    <style name="iconTiny">
+        <item name="android:layout_width">@dimen/icon_tiny</item>
+        <item name="android:layout_height">@dimen/icon_tiny</item>
+        <item name="android:scaleType">fitCenter</item>
+    </style>
+
+    <style name="iconSmall">
+        <item name="android:layout_width">@dimen/icon_small</item>
+        <item name="android:layout_height">@dimen/icon_small</item>
+    </style>
+
+    <style name="iconMedium">
+        <item name="android:layout_width">@dimen/icon_medium</item>
+        <item name="android:layout_height">@dimen/icon_medium</item>
+    </style>
+
+    <style name="iconLarge">
+        <item name="android:layout_width">@dimen/icon_large</item>
+        <item name="android:layout_height">@dimen/icon_large</item>
+    </style>
+
+    <style name="iconGift">
+        <item name="android:layout_width">@dimen/icon_gift</item>
+        <item name="android:layout_height">@dimen/icon_gift</item>
+    </style>
+
+    <style name="tabMoreLinear">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/bg_null_gray_selector</item>
+    </style>
+
+    <style name="line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/line</item>
+        <item name="android:background">@color/color_line</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="imgBookTab">
+        <item name="android:layout_width">@dimen/img_book_tab</item>
+        <item name="android:layout_height">@dimen/img_book_tab</item>
+    </style>
+
+    <style name="txtBookTab">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/colorTextGray</item>
+        <item name="android:textSize">@dimen/text_title</item>
+    </style>
+
+    <style name="llBookTab">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+
+    <style name="btnDialog">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">@dimen/text_title</item>
+    </style>
+
+    <style name="btnDialogCancel" parent="btnDialog">
+        <item name="android:layout_marginRight">@dimen/margin_layout</item>
+        <item name="android:background">@drawable/bg_btn_positive</item>
+        <item name="android:text">@string/cancel</item>
+        <item name="android:textColor">@color/colorOrangeDialog</item>
+    </style>
+
+    <style name="btnDialogConfirm" parent="btnDialog">
+        <item name="android:layout_marginLeft">@dimen/margin_layout</item>
+        <item name="android:background">@drawable/bg_btn_nagative</item>
+        <item name="android:text">@string/accept</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+
+    <style name="dateStatistic">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/colorOrange</item>
+        <item name="android:textSize">@dimen/text_content</item>
+    </style>
+
+    <style name="spaceViewDate">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">10dp</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="textOrangeDialog">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/colorDarkOrange</item>
+        <item name="android:textSize">@dimen/text_content</item>
+    </style>
+
+    <style name="underlineGray">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/colorLightGray</item>
+        <item name="android:layout_marginTop">@dimen/margin_content</item>
+        <item name="android:layout_marginBottom">@dimen/margin_content</item>
+    </style>
+
+    <style name="radioButton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/text_medium</item>
+        <item name="android:textColor">@color/colorTextGray</item>
+    </style>
+
+    <style name="buttonContinue">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="android:layout_marginLeft">@dimen/margin_dialog</item>
+        <item name="android:layout_marginRight">@dimen/margin_dialog</item>
+        <item name="android:background">@drawable/bg_btn_nagative</item>
+        <item name="android:text">@string/continue_1</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_marginTop">@dimen/margin_layout</item>
+        <item name="android:textSize">@dimen/text_title</item>
+    </style>
+
+    <style name="MyRadioButton" parent="Theme.AppCompat.Light">
+        <item name="colorAccent">@color/colorDarkOrange</item>
+    </style>
+
+</resources>

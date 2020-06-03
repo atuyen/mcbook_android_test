@@ -1,0 +1,70 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        google()
+        jcenter()
+        maven { url 'https://maven.fabric.io/public' }
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.2.0'
+        classpath 'com.google.gms:google-services:3.0.0'
+        classpath 'com.dicedmelon.gradle:jacoco-android:0.1.1'
+        classpath('org.codehaus.groovy:groovy-all:2.4.12') {
+            exclude group: 'org.codehaus.groovy', module: 'groovy-all'
+        }
+        classpath "io.realm:realm-gradle-plugin:5.8.0"
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+        classpath 'com.jakewharton:butterknife-gradle-plugin:8.5.0'
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
+        classpath 'io.fabric.tools:gradle:1.+'
+        classpath 'com.google.gms:google-services:4.1.0'
+    }
+}
+
+ext {
+    compileSdkVersion = 28
+    buildToolsVersion = '28.0.2'
+    minSdkVersion = 21
+    targetSdkVersion = 28
+    androidVer = '28.0.0'
+    constrainLayoutVer = '1.0.2'
+    butterknifeVer = '8.5.0'
+    nineoldandroidsVer = '2.4.0'
+    multidexVer = '1.0.3'
+    guavaVer = '20.0'
+    jacksonVer = '2.9.0'
+    imageLoaderVer = '1.9.5'
+    retrofitVer = '2.3.0'
+    okhttpVer = "3.9.1"
+    streamsupportVer = '1.6.0'
+    playServiceVer = '15.0.1'
+    daggerVer = "2.4"
+    rxVer = "1.2.1"
+    nineoldandroidsVer = '2.4.0'
+    swipelayoutVer = '1.2.0'
+    circleindicatorVer = '1.2.2'
+    eventbusVer = '3.1.1'
+    mosbyVer = '3.1.0'
+    leakCanary = '1.5.4'
+    gif = '1.2.12'
+    circleImageView='2.2.0'
+    glide='4.7.1'
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url "https://maven.google.com" }
+        maven { url 'https://maven.fabric.io/public' }
+        maven { url 'https://jitpack.io' }
+        mavenCentral()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

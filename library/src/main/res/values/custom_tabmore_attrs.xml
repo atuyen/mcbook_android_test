@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomTabmoreAttrs">
+        <attr name="imageIcon" format="integer" />
+        <attr name="txtTextTabMore" format="string" />
+    </declare-styleable>
+</resources>

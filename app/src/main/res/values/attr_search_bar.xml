@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SearchBar">
+        <attr name="searchBarIconLeft" format="reference" />
+        <attr name="searchBarIconRight" format="reference" />
+        <attr name="searchBarContent" format="reference" />
+        <attr name="searchBarHint" format="reference" />
+        <attr name="hideLeftIcon" format="boolean" />
+        <attr name="hideRightIcon" format="boolean" />
+        <attr name="bgColorSearchBar" format="reference" />
+        <attr name="textSize" format="integer" />
+        <attr name="colorSearchHint" format="color" />
+    </declare-styleable>
+</resources>

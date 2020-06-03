@@ -1,0 +1,26 @@
+<resources>
+    <string name="double_tap_to_exit">Chạm hai lần liên tiếp để thoát ứng dụng!</string>
+    <string name="cancel">Hủy</string>
+    <string name="select_value">Chọn giá trị</string>
+    <string name="search">Tìm kiếm</string>
+    <string name="done">Hoàn tất</string>
+
+    <string name="day">Ngày</string>
+    <string name="month">Tháng</string>
+    <string name="year">Năm</string>
+    <string name="hour">Giờ</string>
+    <string name="minute">Phút</string>
+
+    <string name="month_one">T1</string>
+    <string name="month_two">T2</string>
+    <string name="month_three">T3</string>
+    <string name="month_four">T4</string>
+    <string name="month_five">T5</string>
+    <string name="month_six">T6</string>
+    <string name="month_seven">T7</string>
+    <string name="month_eight">T8</string>
+    <string name="month_nice">T9</string>
+    <string name="month_ten">T10</string>
+    <string name="month_eleven">T11</string>
+    <string name="month_twelfth">T12</string>
+</resources>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_main"
+    android:orientation="vertical">
+
+    <LinearLayout style="@style/llBookTab">
+
+        <ImageView
+            android:id="@+id/imgBookInformation"
+            style="@style/imgBookTab"
+            app:srcCompat="@drawable/ic_book_tab_1" />
+
+        <com.bon.customview.textview.ExtTextView
+            style="@style/txtBookTab"
+            android:text="@string/general_information"
+            app:textViewFontAssetName="@string/font_regular" />
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/llBookTab">
+
+        <ImageView
+            android:id="@+id/imgBookLesson"
+            style="@style/imgBookTab"
+            app:srcCompat="@drawable/ic_book_tab_3" />
+
+        <com.bon.customview.textview.ExtTextView
+            style="@style/txtBookTab"
+            android:text="@string/lesson"
+            app:textViewFontAssetName="@string/font_regular" />
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/llBookTab">
+
+        <ImageView
+            android:id="@+id/imgBookSubject"
+            style="@style/imgBookTab"
+            app:srcCompat="@drawable/ic_book_tab_2" />
+
+        <com.bon.customview.textview.ExtTextView
+            style="@style/txtBookTab"
+            android:text="@string/exercise"
+            app:textViewFontAssetName="@string/font_regular" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/llBookTab"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/imgBookTraining"
+            style="@style/imgBookTab"
+            app:srcCompat="@drawable/ic_training" />
+
+        <com.bon.customview.textview.ExtTextView
+            style="@style/txtBookTab"
+            android:text="@string/training"
+            app:textViewFontAssetName="@string/font_regular" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:elevation="@dimen/margin_content"
+    android:paddingBottom="@dimen/margin_layout"
+    android:paddingTop="@dimen/margin_layout"
+    app:cardCornerRadius="5dp">
+
+    <LinearLayout
+        android:id="@+id/viewContainer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/default_card_height"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/default_card_height"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:visibility="gone" />
+
+            <com.bon.customview.textview.ExtTextView
+                android:id="@+id/title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_layout"
+                android:layout_weight="1"
+                android:maxLines="2"
+                android:textColor="@color/colorTextGray"
+                android:textSize="@dimen/text_large"
+                app:textViewFontAssetName="@string/font_bold" />
+
+            <ImageView
+                android:id="@+id/arrow"
+                android:layout_width="@dimen/icon_expand"
+                android:layout_height="@dimen/icon_expand"
+                android:layout_marginLeft="@dimen/padding_content"
+                android:layout_marginRight="@dimen/padding_layout"
+                app:srcCompat="@drawable/ic_arrow_down" />
+
+        </LinearLayout>
+
+        <ViewStub
+            android:id="@+id/viewStub"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inflatedId="@+id/innerView" />
+
+        <com.bon.customview.listview.ExtListView
+            android:id="@+id/lvItems"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@null"
+            android:visibility="gone" />
+    </LinearLayout>
+</android.support.v7.widget.CardView>

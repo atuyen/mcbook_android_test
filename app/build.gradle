@@ -1,0 +1,226 @@
+buildscript {
+    repositories {
+        maven { url 'https://plugins.gradle.org/m2/' }
+    }
+    dependencies {
+        classpath 'gradle.plugin.com.onesignal:onesignal-gradle-plugin:[0.11.0, 0.99.99]'
+    }
+}
+apply plugin: 'com.onesignal.androidsdk.onesignal-gradle-plugin'
+
+repositories {
+    maven { url 'https://maven.google.com' }
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+apply plugin: 'realm-android'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        applicationId "com.mc.books"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 15
+        versionName "1.0"
+        multiDexEnabled true
+        vectorDrawables.useSupportLibrary = true
+        setProperty("archivesBaseName", "McBook-Code-" + defaultConfig.versionCode.toString() + "-Version-" + defaultConfig.versionName)
+        flavorDimensions "default"
+    }
+
+    signingConfigs {
+        release {
+            if (project.hasProperty('MYAPP_RELEASE_STORE_FILE')) {
+                storeFile file(MYAPP_RELEASE_STORE_FILE)
+                storePassword MYAPP_RELEASE_STORE_PASSWORD
+                keyAlias MYAPP_RELEASE_KEY_ALIAS
+                keyPassword MYAPP_RELEASE_KEY_PASSWORD
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+
+
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    dexOptions {
+        javaMaxHeapSize "4G"
+        preDexLibraries = false
+    }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/LGPL2.1'
+    }
+
+    lintOptions {
+        abortOnError false
+        disable "ResourceType"
+        disable 'MissingTranslation'
+    }
+
+    productFlavors {
+        MCB_BETA {
+            applicationId "com.mc.books.beta"
+            manifestPlaceholders = [applicationLabel: APP_NAME_BETA, fabricApiKey: API_KEY_BETA, onesignal_app_id: ONESIGNAL_BETA, onesignal_google_project_number: 'REMOTE' ]
+            buildConfigField("String", "BASE_URL", String.format("\"%s\"", BASE_URL_BETA))
+            buildConfigField("String", "SSO", String.format("\"%s\"", SSO_BETA))
+            buildConfigField("String", "SSO_BASE_URL", String.format("\"%s\"", SSO_BASE_URL_BETA))
+        }
+
+        MCB_RELEASE {
+            applicationId "com.mc.books"
+            manifestPlaceholders = [applicationLabel: APP_NAME_RELEASE, fabricApiKey: API_KEY_DEBUG, onesignal_app_id: ONESIGNAL_RELEASE, onesignal_google_project_number: 'REMOTE' ]
+            buildConfigField("String", "BASE_URL", String.format("\"%s\"", BASE_URL_RELEASE))
+            buildConfigField("String", "SSO", String.format("\"%s\"", SSO_RELEASE))
+            buildConfigField("String", "SSO_BASE_URL", String.format("\"%s\"", SSO_BASE_URL_RELEASE))
+        }
+
+        MCB_DEBUG {
+            applicationId "com.mc.books.debug"
+            manifestPlaceholders = [applicationLabel: APP_NAME_DEBUG, fabricApiKey: API_KEY_DEBUG, onesignal_app_id: ONESIGNAL_BETA, onesignal_google_project_number: 'REMOTE' ]
+            buildConfigField("String", "BASE_URL", String.format("\"%s\"", BASE_URL_DEBUG))
+            buildConfigField("String", "SSO", String.format("\"%s\"", SSO_DEBUG))
+            buildConfigField("String", "SSO_BASE_URL", String.format("\"%s\"", SSO_BASE_URL_DEBUG))
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation project(':library')
+    implementation project(':authz')
+    implementation project(':MPChartLib')
+    implementation project(':audioplayer')
+    implementation project(':playerbackground')
+    implementation project(':mathjax')
+
+    implementation "com.android.support:appcompat-v7:${rootProject.ext.androidVer}"
+    implementation "com.android.support:design:${rootProject.ext.androidVer}"
+    implementation "com.android.support:support-v4:${rootProject.ext.androidVer}"
+    implementation "com.android.support:cardview-v7:${rootProject.ext.androidVer}"
+    implementation "com.android.support:recyclerview-v7:${rootProject.ext.androidVer}"
+    implementation "com.android.support.constraint:constraint-layout:${rootProject.ext.constrainLayoutVer}"
+
+    // play service
+    implementation "com.google.android.gms:play-services-base:${rootProject.ext.playServiceVer}"
+
+    //onsignal
+    implementation 'com.onesignal:OneSignal:[3.9.1, 3.99.99]'
+
+    // butter knife
+    implementation "com.jakewharton:butterknife:${rootProject.ext.butterknifeVer}"
+    annotationProcessor "com.jakewharton:butterknife-compiler:${rootProject.ext.butterknifeVer}"
+//    apt "com.jakewharton:butterknife-compiler:${rootProject.ext.butterknifeVer}"
+
+    // java8
+    implementation "net.sourceforge.streamsupport:streamsupport:${rootProject.ext.streamsupportVer}"
+
+    // jackson
+    implementation "com.fasterxml.jackson.core:jackson-core:${rootProject.ext.jacksonVer}"
+    implementation "com.fasterxml.jackson.core:jackson-annotations:${rootProject.ext.jacksonVer}"
+    implementation "com.fasterxml.jackson.core:jackson-databind:${rootProject.ext.jacksonVer}"
+
+    // dependency injection
+    implementation "com.google.dagger:dagger:${rootProject.ext.daggerVer}"
+    annotationProcessor "com.google.dagger:dagger-compiler:${rootProject.ext.daggerVer}"
+
+    // network
+    implementation "com.squareup.retrofit2:retrofit:${rootProject.ext.retrofitVer}"
+    implementation "com.squareup.retrofit2:adapter-rxjava:${rootProject.ext.retrofitVer}"
+    implementation "com.squareup.retrofit2:converter-gson:${rootProject.ext.retrofitVer}"
+    implementation "com.squareup.retrofit2:converter-jackson:${rootProject.ext.retrofitVer}"
+    implementation "com.squareup.okhttp3:logging-interceptor:${rootProject.ext.okhttpVer}"
+    implementation "com.squareup.okhttp3:okhttp:${rootProject.ext.okhttpVer}"
+
+    //fabric
+    implementation('com.crashlytics.sdk.android:crashlytics:2.9.4@aar') {
+        transitive = true
+    }
+    // rx java, android
+    implementation "io.reactivex:rxandroid:${rootProject.ext.rxVer}"
+    implementation "io.reactivex:rxjava:${rootProject.ext.rxVer}"
+
+    // animation
+    implementation "com.nineoldandroids:library:${rootProject.ext.nineoldandroidsVer}"
+
+    // java
+    implementation "com.android.support:multidex:${rootProject.ext.multidexVer}"
+    implementation "com.google.guava:guava:${rootProject.ext.guavaVer}"
+
+    // image
+    implementation "com.nostra13.universalimageloader:universal-image-loader:${rootProject.ext.imageLoaderVer}"
+
+    // event bus
+    implementation "org.greenrobot:eventbus:${rootProject.ext.eventbusVer}"
+
+    // mvp
+    implementation "com.hannesdorfmann.mosby3:mvp:${rootProject.ext.mosbyVer}"
+    implementation "com.hannesdorfmann.mosby3:viewstate:${rootProject.ext.mosbyVer}"
+
+    // leak canary
+
+    //    debugImplementation "com.squareup.leakcanary:leakcanary-android:${rootProject.ext.leakCanary}"
+
+    //    releaseImplementation "com.squareup.leakcanary:leakcanary-android-no-op:${rootProject.ext.leakCanary}"
+
+    //gif
+    implementation "pl.droidsonroids.gif:android-gif-drawable:${rootProject.ext.gif}"
+
+    //CircleImageView
+    implementation "de.hdodenhof:circleimageview:${rootProject.ext.circleImageView}"
+    implementation 'com.github.nguyenhoanglam:ImagePicker:1.2.1'
+
+    // auth
+    implementation 'com.auth0.android:jwtdecode:1.1.1'
+    implementation 'org.jboss.aerogear:aerogear-android-store:4.0.0'
+    implementation('org.jboss.aerogear:aerogear-android-pipe:4.0.0') {
+        exclude group: 'com.android.support', module: "support-v4"
+    }
+    implementation 'io.github.luizgrp.sectionedrecyclerviewadapter:sectionedrecyclerviewadapter:1.2.0'
+    implementation 'com.github.skydoves:powermenu:2.0.4'
+    implementation 'com.milaptank:stv:1.0.0'
+    implementation 'com.dlazaro66.qrcodereaderview:qrcodereaderview:2.0.3'
+    implementation 'com.github.barteksc:android-pdf-viewer:3.0.0-beta.5'
+    implementation 'com.github.bumptech.glide:glide:4.7.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.7.1'
+    implementation 'com.mani:ThinDownloadManager:1.4.0'
+    implementation 'me.leolin:ShortcutBadger:1.1.22@aar'
+    implementation('com.google.android.gms:play-services-plus:+') {
+        exclude group: 'com.android.support'
+    }
+    implementation 'com.github.rubensousa:gravitysnaphelper:1.5'
+    implementation 'com.google.firebase:firebase-core:16.0.1'
+    implementation 'org.apache.commons:commons-text:1.4'
+    implementation 'org.jsoup:jsoup:1.11.3'
+    implementation 'com.github.lzyzsd:circleprogress:1.2.1'
+    implementation 'com.googlecode.mp4parser:isoparser:1.0.2'
+
+}
+
+
+apply plugin: 'com.google.gms.google-services'
+com.google.gms.googleservices.GoogleServicesPlugin.config.disableVersionCheck = true

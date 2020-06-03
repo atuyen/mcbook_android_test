@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:id="@+id/rootMatching"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/margin_content"
+    android:paddingRight="@dimen/margin_content"
+    android:visibility="gone">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginTop="@dimen/margin_layout"
+            app:cardCornerRadius="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_blue"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/margin_layout"
+                android:paddingLeft="@dimen/margin_content"
+                android:paddingRight="@dimen/margin_content"
+                android:paddingTop="@dimen/margin_layout">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <com.bon.customview.textview.ExtTextView
+                        android:id="@+id/txtContentMatching"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorTextGray"
+                        android:textSize="@dimen/text_medium"
+                        app:textViewFontAssetName="@string/font_regular"
+                        tool:text="Chọn đáp án đúng" />
+
+                    <de.timfreiheit.mathjax.android.MathJaxView
+                        android:id="@+id/mathjaxMatching"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_weight="1"
+                        android:visibility="gone"
+                        app:automaticLinebreaks="true"
+                        app:input="TeX"
+                        app:output="SVG" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvMatching"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+</android.support.v4.widget.NestedScrollView>

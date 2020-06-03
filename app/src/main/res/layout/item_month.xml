@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <com.bon.customview.textview.ExtTextView
+        android:id="@+id/txtMonth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_layout"
+        android:layout_marginRight="@dimen/margin_layout"
+        android:textColor="@color/colorTextGray"
+        android:textSize="@dimen/text_title"
+        app:textViewFontAssetName="@string/font_regular"
+        tool:text="Tháng 1" />
+
+</LinearLayout>

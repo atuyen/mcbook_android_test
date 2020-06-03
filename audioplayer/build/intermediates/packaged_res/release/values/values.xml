@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bvp_seekbar_color">#3F51B5</color>
+    <color name="bvp_subtitle_color">#FFFFFF</color>
+    <declare-styleable name="BetterAudioPlayer">
+
+        <attr format="string" name="bvp_source"/>
+        <attr format="string" name="bvp_title"/>
+
+        <attr format="reference" name="bvp_playDrawable"/>
+        <attr format="reference" name="bvp_pauseDrawable"/>
+        <attr format="reference" name="bvp_restartDrawable"/>
+        <attr name="bvp_loadingStyle">
+            <enum name="DoubleBounce" value="0"/>
+            <enum name="RotatingPlane" value="1"/>
+            <enum name="Wave" value="2"/>
+            <enum name="WanderingCubes" value="3"/>
+            <enum name="Pulse" value="4"/>
+            <enum name="ChasingDots" value="5"/>
+            <enum name="ThreeBounce" value="6"/>
+            <enum name="Circle" value="7"/>
+            <enum name="CubeGrid" value="8"/>
+            <enum name="FadingCircle" value="9"/>
+            <enum name="RotatingCircle" value="10"/>
+        </attr>
+
+        <attr format="reference" name="bvp_menu"/>
+
+        <attr format="boolean" name="bvp_hideControlsOnPlay"/>
+        <attr format="boolean" name="bvp_autoPlay"/>
+        <attr format="boolean" name="bvp_loop"/>
+        <attr format="boolean" name="bvp_showTotalDuration"/>
+        <!--
+            Show a preview of the current progress on the bottom of the video.
+            Kind of like the Youtube player.
+        -->
+        <attr format="boolean" name="bvp_showBottomProgressBar"/>
+        <attr format="boolean" name="bvp_swipeGesturesEnabled"/>
+        <attr format="boolean" name="bvp_showToolbar"/>
+        <attr format="integer" name="bvp_hideControlsDuration"/>
+
+        <attr format="boolean" name="bvp_disableControls"/>
+
+        <attr format="boolean" name="bvp_autoFullscreen"/>
+
+        <attr format="dimension" name="bvp_captionSize"/>
+        <attr format="color" name="bvp_captionColor"/>
+
+    </declare-styleable>
+    <dimen name="bvp_button_size">30dp</dimen>
+    <dimen name="bvp_content_inset">16dp</dimen>
+    <dimen name="bvp_content_inset_half">8dp</dimen>
+    <dimen name="bvp_content_inset_iconbuttons">2dp</dimen>
+    <dimen name="bvp_content_inset_less">1dp</dimen>
+    <dimen name="bvp_negative_inset_large">-8dp</dimen>
+    <dimen name="bvp_negative_inset_small">-2dp</dimen>
+    <dimen name="bvp_subtitle_size">20sp</dimen>
+    <dimen name="bvp_text_size_large">18sp</dimen>
+    <dimen name="bvp_text_size_medium">14sp</dimen>
+    <dimen name="bvp_text_size_small">10sp</dimen>
+    <string name="brightness">Brightness: %1$d</string>
+    <string name="bvp_left">LEFT</string>
+    <string name="bvp_right">RIGHT</string>
+    <string name="volume">Volume: %1$d</string>
+</resources>

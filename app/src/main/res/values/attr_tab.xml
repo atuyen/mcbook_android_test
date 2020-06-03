@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomTab">
+        <attr name="tabActiveColor" format="reference" />
+        <attr name="tabInactiveColor" format="reference" />
+        <attr name="tabTextActiveColor" format="reference" />
+        <attr name="tabTextInactiveColor" format="reference" />
+        <attr name="tabTextSize" format="reference" />
+        <attr name="tabText" format="string" />
+        <attr name="tabActive" format="boolean" />
+    </declare-styleable>
+</resources>

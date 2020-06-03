@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="accent">#FF4081</color>
+    <color name="background">#e5e5e5</color>
+    <color name="background_selector">@color/background</color>
+    <color name="background_tab_pressed">#6633B5E5</color>
+    <color name="black_semi_transparent">#B2000000</color>
+    <color name="blue_semi_transparent">#805677fc</color>
+    <color name="blue_semi_transparent_pressed">#80738ffe</color>
+    <color name="colorAccent">#1c561b</color>
+    <color name="colorPrimary">#1c561b</color>
+    <color name="colorPrimaryDark">#1c561b</color>
+    <color name="color_badge">@android:color/holo_red_light</color>
+    <color name="color_badge_border">#f5f5f5</color>
+    <color name="color_bg_cancel">#f9f9f9</color>
+    <color name="color_black">#000000</color>
+    <color name="color_black_selector">#c8000000</color>
+    <color name="color_blue">#2dc2f2</color>
+    <color name="color_border">#e4e6e6</color>
+    <color name="color_disable">#959496</color>
+    <color name="color_facebook">#3b5998</color>
+    <color name="color_facebook_selector">#c83b5998</color>
+    <color name="color_google">#dd4a38</color>
+    <color name="color_google_selector">#c8dd4a38</color>
+    <color name="color_gray">#acacac</color>
+    <color name="color_gray_selector">#32bbbbbb</color>
+    <color name="color_red">#ed1d24</color>
+    <color name="color_red_selector">#c8ed1d24</color>
+    <color name="color_white">#ffffff</color>
+    <color name="half_black">#808080</color>
+    <color name="holo_blue">#33b5e5</color>
+    <color name="holo_green">#99cc00</color>
+    <color name="holo_orange">#ffbb33</color>
+    <color name="holo_purple">#aa66cc</color>
+    <color name="holo_red">#ff4444</color>
+    <color name="holo_white">#ffffff</color>
+    <color name="pink">#e91e63</color>
+    <color name="pink_pressed">#ec407a</color>
+    <color name="progress_default_color">#ff8800</color>
+    <color name="title_bg_color">#00d4ff</color>
+    <color name="title_bg_end_color">#00aeff</color>
+    <color name="title_bg_start_color">#0077ff</color>
+    <color name="white">#ffffff</color>
+    <color name="white_float_button">#fafafa</color>
+    <color name="white_pressed">#f1f1f1</color>
+    <declare-styleable name="CustomTabmoreAttrs">
+        <attr format="integer" name="imageIcon"/>
+        <attr format="string" name="txtTextTabMore"/>
+    </declare-styleable>
+    <declare-styleable name="ExtAutoCompleteTextView">
+        <attr format="string" name="autoCompleteFontAssetName"/>
+    </declare-styleable>
+    <declare-styleable name="ExtButton">
+        <attr format="string" name="buttonFontAssetName"/>
+    </declare-styleable>
+    <declare-styleable name="ExtCheckBox">
+        <attr format="string" name="checkBoxFontAssetName"/>
+    </declare-styleable>
+    <declare-styleable name="ExtEditText">
+        <attr name="validate">
+            <flag name="regexp" value="0x0001"/>
+            <flag name="numeric" value="0x0002"/>
+            <flag name="alpha" value="0x0004"/>
+            <flag name="alphaNumeric" value="0x0008"/>
+            <flag name="email" value="0x0010"/>
+            <flag name="creditCard" value="0x0020"/>
+            <flag name="phone" value="0x0040"/>
+            <flag name="domainName" value="0x0080"/>
+            <flag name="ipAddress" value="0x0100"/>
+            <flag name="webUrl" value="0x0200"/>
+            <flag name="nocheck" value="0"/>
+        </attr>
+        <attr format="string" name="errorString"/>
+        <attr format="string" name="emptyErrorString"/>
+        <attr format="string" name="validatorRegexp"/>
+        <attr format="boolean" name="isEmpty"/>
+        <attr format="string" name="editTextFontAssetName"/>
+    </declare-styleable>
+    <declare-styleable name="ExtPagingListView">
+        <attr format="boolean" name="swipeRefreshEnable"/>
+        <attr format="color" name="swipeRefreshIndicatorColor"/>
+        <attr format="boolean" name="scrollbarVisible"/>
+        <attr format="color" name="dividerColor"/>
+        <attr format="dimension" name="dividerHeight"/>
+        <attr format="string" name="noDataMessage"/>
+    </declare-styleable>
+    <declare-styleable name="ExtRadioButton">
+        <attr format="string" name="radioButtonFontAssetName"/>
+    </declare-styleable>
+    <declare-styleable name="ExtReadMoreTextView">
+        <attr format="string" name="trimExpandedText"/>
+        <attr format="string" name="trimCollapsedText"/>
+        <attr format="integer" name="trimLength"/>
+        <attr format="boolean" name="showTrimExpandedText"/>
+        <attr format="color" name="colorClickableText"/>
+    </declare-styleable>
+    <declare-styleable name="ExtSwitchView">
+        <attr format="string" name="switchFontAssetName"/>
+    </declare-styleable>
+    <declare-styleable name="ExtTextView">
+        <attr format="string" name="textViewFontAssetName"/>
+        <attr format="integer" name="limit"/>
+        <attr format="boolean" name="isLimit"/>
+        <attr format="boolean" name="chooseItem"/>
+    </declare-styleable>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="font_size_content">14sp</dimen>
+    <dimen name="font_size_description">12sp</dimen>
+    <dimen name="font_size_message">@dimen/font_size_content</dimen>
+    <dimen name="font_size_title">20sp</dimen>
+    <dimen name="padding_content">8dp</dimen>
+    <dimen name="padding_layout">12dp</dimen>
+    <dimen name="radius">3dp</dimen>
+    <dimen name="size_border">1dp</dimen>
+    <dimen name="size_border_bold">2dp</dimen>
+    <integer name="card_flip_time_full">200</integer>
+    <integer name="card_flip_time_half">100</integer>
+    <string name="app_name">Library</string>
+    <string name="cancel">Cancel</string>
+    <string name="day">Day</string>
+    <string name="done">Done</string>
+    <string name="double_tap_to_exit">Double tap to Exit!</string>
+    <string name="error_creditcard_number_not_valid">Credit card number is not valid</string>
+    <string name="error_domain_not_valid">Domain name not valid</string>
+    <string name="error_email_address_not_valid">Email address not valid</string>
+    <string name="error_field_must_not_be_empty">The field must not be empty</string>
+    <string name="error_ip_not_valid">IP Address not valid</string>
+    <string name="error_only_numeric_digits_allowed">Only numeric digits are allowed.</string>
+    <string name="error_only_standard_letters_are_allowed">Only standard letters are allowed</string>
+    <string name="error_phone_not_valid">Phone number not valid</string>
+    <string name="error_regexp_not_valid">Reg exp is not valid</string>
+    <string name="error_this_field_cannot_contain_special_character">This field cannot contain any special character</string>
+    <string name="error_url_not_valid">Web Url is not valid</string>
+    <string name="font_black">fonts/SF-Pro-Display-Black.otf</string>
+    <string name="font_bold">fonts/SF-Pro-Display-Bold.otf</string>
+    <string name="font_italic">fonts/SF-Pro-Display-RegularItalic.otf</string>
+    <string name="font_regular">fonts/SF-Pro-Display-Regular.otf</string>
+    <string name="hour">Hour</string>
+    <string name="loading">loading...</string>
+    <string name="minute">Minute</string>
+    <string name="month">Month</string>
+    <string name="month_eight">T8</string>
+    <string name="month_eleven">T11</string>
+    <string name="month_five">T5</string>
+    <string name="month_four">T4</string>
+    <string name="month_nice">T9</string>
+    <string name="month_one">T1</string>
+    <string name="month_seven">T7</string>
+    <string name="month_six">T6</string>
+    <string name="month_ten">T10</string>
+    <string name="month_three">T3</string>
+    <string name="month_twelfth">T12</string>
+    <string name="month_two">T2</string>
+    <string name="no_data">Data not found</string>
+    <string name="percent_label">%</string>
+    <string name="read_less">show less</string>
+    <string name="read_more">show more</string>
+    <string name="search">Search</string>
+    <string name="select_value">Select value</string>
+    <string name="year">Year</string>
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_up</item>
+        <item name="android:windowExitAnimation">@anim/slide_down</item>
+    </style>
+    <style name="StyleContent">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/font_size_content</item>
+        <item name="android:textColor">@color/color_black</item>
+        <item name="android:padding">@dimen/padding_content</item>
+    </style>
+    <style name="StyleContentBold" parent="StyleContent">
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="StyleTitle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/font_size_title</item>
+        <item name="android:textColor">@color/color_black</item>
+        <item name="android:padding">@dimen/padding_content</item>
+    </style>
+</resources>

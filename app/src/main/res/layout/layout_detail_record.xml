@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_yellow"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_layout">
+
+        <com.bon.customview.textview.ExtTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/padding_content"
+            android:text="@string/role_detail"
+            android:textColor="@color/colorSub1"
+            android:textSize="@dimen/text_title"
+            app:textViewFontAssetName="@string/font_bold" />
+
+        <com.bon.customview.textview.ExtTextView
+            android:id="@+id/txtRole"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorSub1"
+            android:textSize="@dimen/text_title"
+            app:textViewFontAssetName="@string/font_regular"
+            tool:text="Tom" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/padding_layout"
+        android:layout_weight="1"
+        android:background="@drawable/bg_white_exam">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recySubTitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <bg.player.com.playerbackground.module.AudioPlayerBG
+        android:id="@+id/audioBG"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:apbg_UItype="1"
+        app:apbg_autoplay="false" />
+</LinearLayout>

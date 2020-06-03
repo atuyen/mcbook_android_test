@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bvp_subtitle_color">#FFFFFF</color>
+    <color name="bvp_seekbar_color">#3F51B5</color>
+</resources>

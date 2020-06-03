@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:id="@+id/llMesssageDialog"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="@dimen/margin_dialog">
+
+    <ImageView
+        android:layout_width="@dimen/img_dialog"
+        android:layout_height="@dimen/img_dialog"
+        app:srcCompat="@drawable/ic_tick" />
+
+    <com.bon.customview.textview.ExtTextView
+        android:id="@+id/txtMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_dialog"
+        android:layout_marginLeft="@dimen/margin_layout"
+        android:layout_marginRight="@dimen/margin_layout"
+        android:layout_marginTop="@dimen/margin_dialog"
+        android:ems="1000"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="@color/colorTextGray"
+        android:textSize="@dimen/text_title"
+        app:textViewFontAssetName="@string/font_regular"
+        tool:text="Chúc mừng 123" />
+
+    <com.bon.customview.button.ExtButton
+        android:id="@+id/btnGoStudy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_dialog"
+        android:layout_marginRight="@dimen/margin_dialog"
+        android:background="@drawable/bg_btn_save_profile"
+        android:text="@string/go_study"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/text_medium"
+        android:visibility="gone" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvGift"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+</LinearLayout>

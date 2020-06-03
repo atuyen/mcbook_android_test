@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_yellow_gradient_90">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_layout">
+
+            <com.bon.customview.button.ExtButton
+                android:id="@+id/btn_member"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/icon_large"
+                android:layout_marginBottom="@dimen/padding_layout"
+                android:layout_marginRight="@dimen/margin_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_btn_orange"
+                android:text="@string/member"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_medium" />
+
+            <com.bon.customview.button.ExtButton
+                android:id="@+id/btn_book"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/icon_large"
+                android:layout_marginBottom="@dimen/padding_layout"
+                android:layout_marginLeft="@dimen/margin_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_btn_white"
+                android:text="@string/book"
+                android:textAllCaps="false"
+                android:textColor="@color/colorTextGray"
+                android:textSize="@dimen/text_medium" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorOrangeOpacity"
+            android:padding="@dimen/margin_content">
+
+            <com.bon.customview.textview.ExtTextView
+                android:id="@+id/txtUpdateTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColor="@color/colorDarkOrange"
+                android:textSize="@dimen/text_small"
+                tools:text="Cập nhật 10/10/2010 03:00 am" />
+
+            <ImageView
+                android:id="@+id/img_filter"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                app:srcCompat="@drawable/ic_filter" />
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvMember"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvBook"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/margin_content"
+            android:paddingRight="@dimen/margin_content"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fbMember"
+        android:layout_width="@dimen/fab_size"
+        android:layout_height="@dimen/fab_size"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/margin_dialog"
+        android:layout_marginRight="@dimen/margin_content"
+        android:background="@drawable/bg_btn_float"
+        android:gravity="center">
+
+        <ImageView
+            style="@style/iconSmall"
+            android:scaleType="center"
+            app:srcCompat="@drawable/ic_person" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="main$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Volumes/DATA/Mcbook/mathjax/src/main/res"/><source path="/Volumes/DATA/Mcbook/mathjax/build/generated/res/rs/debug"/><source path="/Volumes/DATA/Mcbook/mathjax/build/generated/res/resValues/debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="main" generated-set="main$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Volumes/DATA/Mcbook/mathjax/src/main/res"><file path="/Volumes/DATA/Mcbook/mathjax/src/main/res/values/styleable.xml" qualifiers=""><declare-styleable name="MathJaxView">
+        <attr name="android:gravity"/>
+        <attr format="boolean" name="verticalScrollbarsEnabled"/>
+        <attr format="boolean" name="horizontalScrollbarsEnabled"/>
+        <attr format="enum" name="input">
+            <enum name="TeX" value="0"/>
+            <enum name="MathML" value="1"/>
+            <enum name="AsciiMath" value="2"/>
+        </attr>
+        <attr format="enum" name="output">
+            <enum name="SVG" value="0"/>
+            <enum name="HTML_CSS" value="1"/>
+            <enum name="CommonHTML" value="2"/>
+            <enum name="NativeMML" value="3"/>
+        </attr>
+        <attr format="integer" name="outputScale"/>
+        <attr format="integer" name="minScaleAdjust"/>
+        <attr format="boolean" name="automaticLinebreaks"/>
+        <attr format="integer" name="blacker"/>
+
+    </declare-styleable></file></source><source path="/Volumes/DATA/Mcbook/mathjax/build/generated/res/rs/debug"/><source path="/Volumes/DATA/Mcbook/mathjax/build/generated/res/resValues/debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Volumes/DATA/Mcbook/mathjax/src/debug/res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug" generated-set="debug$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Volumes/DATA/Mcbook/mathjax/src/debug/res"/></dataSet><mergedItems><configuration qualifiers=""><declare-styleable name="MathJaxView">
+        <attr name="android:gravity"/>
+        <attr format="boolean" name="verticalScrollbarsEnabled"/>
+        <attr format="boolean" name="horizontalScrollbarsEnabled"/>
+        <attr format="enum" name="input">
+            <enum name="TeX" value="0"/>
+            <enum name="MathML" value="1"/>
+            <enum name="AsciiMath" value="2"/>
+        </attr>
+        <attr format="enum" name="output">
+            <enum name="SVG" value="0"/>
+            <enum name="HTML_CSS" value="1"/>
+            <enum name="CommonHTML" value="2"/>
+            <enum name="NativeMML" value="3"/>
+        </attr>
+        <attr format="integer" name="outputScale"/>
+        <attr format="integer" name="minScaleAdjust"/>
+        <attr format="boolean" name="automaticLinebreaks"/>
+        <attr format="integer" name="blacker"/>
+
+    </declare-styleable></configuration></mergedItems></merger>

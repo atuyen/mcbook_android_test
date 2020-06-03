@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_white"
+    android:orientation="vertical">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <com.bon.customview.textview.ExtTextView
+            android:id="@+id/tvCancel"
+            style="@style/StyleContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_null_gray_selector"
+            android:gravity="center"
+            android:padding="@dimen/padding_layout"
+            android:text="@string/cancel"
+            android:textSize="@dimen/font_size_title" />
+
+        <com.bon.customview.textview.ExtTextView
+            style="@style/StyleTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:gravity="center"
+            android:padding="@dimen/padding_layout"
+            android:text="@string/select_value"
+            android:textColor="@color/color_white" />
+
+        <com.bon.customview.textview.ExtTextView
+            style="@style/StyleContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@drawable/bg_null_gray_selector"
+            android:padding="@dimen/padding_layout"
+            android:text="@string/cancel"
+            android:textSize="@dimen/font_size_title"
+            android:visibility="invisible" />
+    </TableRow>
+
+    <com.bon.customview.edittext.ExtEditText
+        android:id="@+id/edtSearch"
+        style="@style/StyleContent"
+        android:layout_margin="@dimen/padding_layout"
+        android:background="@drawable/bg_white_gray_radius"
+        android:drawablePadding="@dimen/padding_content"
+        android:hint="@string/search"
+        android:imeOptions="actionSearch"
+        android:inputType="text"
+        android:visibility="gone" />
+
+    <com.bon.customview.edittext.ExtEditText
+        android:id="@+id/edtSearchAPI"
+        style="@style/StyleContent"
+        android:layout_margin="@dimen/padding_layout"
+        android:background="@drawable/bg_white_gray_radius"
+        android:drawablePadding="@dimen/padding_content"
+        android:hint="@string/search"
+        android:imeOptions="actionSearch"
+        android:inputType="text"
+        android:visibility="gone" />
+
+    <com.bon.customview.listview.ExtListView
+        android:id="@+id/lvKeyValuePair"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/color_border"
+        android:dividerHeight="@dimen/size_border"/>
+</LinearLayout>

@@ -1,0 +1,36 @@
+SoapService.newInstance(Service.NAME_SPACE, Service.URL, Service.ConfigValueLoad)
+                .setSoapListener(new SoapListener() {
+                    @Override
+                    public void SoapStarted() {
+
+                    }
+
+                    @Override
+                    public void SoapFinished(SoapObject soapObject) {
+                        SoapResponse result = SoapUtils.getValueFromSoapObject(soapObject);
+                        Log.e("result", "result:: " + result);
+                    }
+
+                    @Override
+                    public void SoapFinishedWithException(Exception exception) {
+                        exception.printStackTrace();
+                    }
+
+                    @Override
+                    public void SoapEnded() {
+
+                    }
+                })
+                .addHeader(Service.getHeader(Service.ConfigValueLoad))
+                .addPropertySoapObject(Service.ConfigType, "1")
+                .addPropertySoapObject(Service.MachineId, "358310060448009")
+                .addPropertySoapObject(Service.MachineName, "SM-T231")
+                .addPropertySoapObject(Service.LangId, 1)
+                .execute();
+
+                // get header for soap service
+                    public static List<HeaderProperty> getHeader(String methodName) {
+                        List<HeaderProperty> properties = new ArrayList<>();
+                        properties.add(new HeaderProperty(SOAPAction, "http://tempuri.org" + "/" + methodName));
+                        return properties;
+                    }

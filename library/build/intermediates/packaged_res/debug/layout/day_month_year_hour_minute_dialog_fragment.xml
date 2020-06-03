@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <com.bon.customview.textview.ExtTextView
+            android:id="@+id/tvCancel"
+            style="@style/StyleTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_layout"
+            android:background="@drawable/bg_null_gray_selector"
+            android:text="@string/cancel"
+            android:textSize="@dimen/font_size_title" />
+
+        <com.bon.customview.textview.ExtTextView
+            style="@style/StyleTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5" />
+
+        <com.bon.customview.textview.ExtTextView
+            android:id="@+id/tvSave"
+            style="@style/StyleTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_layout"
+            android:background="@drawable/bg_null_gray_selector"
+            android:text="@string/done"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/font_size_title" />
+    </TableRow>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_layout">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <com.bon.customview.textview.ExtTextView
+                style="@style/StyleContent"
+                android:gravity="center"
+                android:text="@string/day"
+                android:visibility="gone" />
+
+            <com.bon.customview.numberpicker.ExtNumberPicker
+                android:id="@+id/numPickerDay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:descendantFocusability="blocksDescendants" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_layout"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <com.bon.customview.textview.ExtTextView
+                style="@style/StyleContent"
+                android:gravity="center"
+                android:text="@string/month"
+                android:visibility="gone" />
+
+            <com.bon.customview.numberpicker.ExtNumberPicker
+                android:id="@+id/numPickerMonth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:descendantFocusability="blocksDescendants" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_layout"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <com.bon.customview.textview.ExtTextView
+                style="@style/StyleContent"
+                android:gravity="center"
+                android:text="@string/year"
+                android:visibility="gone" />
+
+            <com.bon.customview.numberpicker.ExtNumberPicker
+                android:id="@+id/numPickerYear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:descendantFocusability="blocksDescendants" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_layout">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:orientation="vertical" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <com.bon.customview.textview.ExtTextView
+                style="@style/StyleContent"
+                android:gravity="center"
+                android:text="@string/hour"
+                android:visibility="gone" />
+
+            <com.bon.customview.numberpicker.ExtNumberPicker
+                android:id="@+id/numPickerHour"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:descendantFocusability="blocksDescendants" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_layout"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <com.bon.customview.textview.ExtTextView
+                style="@style/StyleContent"
+                android:gravity="center"
+                android:text="@string/minute"
+                android:visibility="gone" />
+
+            <com.bon.customview.numberpicker.ExtNumberPicker
+                android:id="@+id/numPickerMinute"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:descendantFocusability="blocksDescendants" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:orientation="vertical" />
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,30 @@
+private static class SomeObject {
+  @Column(SOME_FIELD)
+  private String mSomeField;
+
+  @Column(SOME_OTHER_FIELD)
+  private long mSomeOtherField;
+
+  @Column(SOME_OPTIONAL_FIELD)
+  private Long mSomeOptionalField;
+
+  @Column(SOME_BOOLEAN_FIELD)
+  private boolean mBooleanField;
+
+  // getters and setters
+}
+
+And then use MicroOrm:
+
+MicroOrm uOrm = new MicroOrm();
+SomeObject o = uOrm.fromCursor(c, SomeObject.class);
+ContentValues values = uOrm.toContentValues(o);
+
+// in case you'll iterate over the whole cursor
+SomeObject o = new SomeObject();
+do {
+  uORM.fromCursor(c, o);
+} while (c.moveToNext());
+
+// if you need to dump the whole cursor to list
+List<SomeObject> someObjects = uOrm.listFromCursor(c, SomeObject.class);

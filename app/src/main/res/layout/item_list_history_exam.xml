@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_content">
+
+        <com.bon.customview.textview.ExtTextView
+            android:id="@+id/txtTimeStart"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/margin_layout"
+            android:layout_weight="0.5"
+            android:textColor="@color/colorTextGray"
+            android:textSize="@dimen/text_medium"
+            app:textViewFontAssetName="@string/font_regular"
+            tool:text="09:15 " />
+
+
+        <com.bon.customview.textview.ExtTextView
+            android:id="@+id/txtDateStart"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:ellipsize="middle"
+            android:singleLine="true"
+            android:textColor="@color/colorTextGray"
+            android:textSize="@dimen/text_medium"
+            app:textViewFontAssetName="@string/font_regular"
+            tool:text="01/09/2018" />
+
+        <com.mpt.android.stv.SpannableTextView
+            android:id="@+id/txtPoint"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/margin_layout"
+            android:layout_weight="1"
+            android:ellipsize="middle"
+            android:gravity="right"
+            android:singleLine="true"
+            android:textColor="@color/colorOrange"
+            android:textSize="@dimen/text_medium"
+            app:textViewFontAssetName="@string/font_regular"
+            tool:text="100 điểm" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/viewLine"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorDivider" />
+</LinearLayout>

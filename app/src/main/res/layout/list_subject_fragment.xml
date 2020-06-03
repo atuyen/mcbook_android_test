@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_main"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/margin_content"
+    android:paddingRight="@dimen/margin_content"
+    android:paddingTop="@dimen/margin_content">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorBlue"
+            android:padding="@dimen/margin_content">
+
+            <com.bon.customview.textview.ExtTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/score"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_content"
+                app:textViewFontAssetName="@string/font_regular" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal">
+
+                <com.bon.customview.textview.ExtTextView
+                    android:id="@+id/txtPoint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text_large"
+                    app:textViewFontAssetName="@string/font_bold"
+                    tool:text="150/300" />
+
+            </LinearLayout>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <com.bon.customview.textview.ExtTextView
+        android:id="@+id/txtResetQuestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginBottom="@dimen/margin_content"
+        android:layout_marginTop="@dimen/margin_content"
+        android:text="@string/do_subject_again"
+        android:textColor="@color/colorViolet"
+        android:textSize="@dimen/text_medium"
+        app:textViewFontAssetName="@string/font_italic" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvSubject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

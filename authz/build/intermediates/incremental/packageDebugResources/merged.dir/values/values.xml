@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AeroGear Android Authorization</string>
+    <style name="DialogFragmentStyle" parent="@android:style/Theme.Dialog">
+        
+    </style>
+</resources>

@@ -1,0 +1,5 @@
+D com/bon/fragment/animation/CubeAnimation$Direction
+D com/bon/fragment/animation/FlipAnimation$Direction
+D com/bon/fragment/animation/MoveAnimation$Direction
+D com/bon/fragment/animation/PushPullAnimation$Direction
+D com/bon/fragment/animation/SidesAnimation$Direction

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:id="@+id/llLesson"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/margin_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_content"
+        android:orientation="horizontal">
+
+        <com.bon.customview.textview.ExtTextView
+            android:id="@+id/txtQuestionName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textColor="@color/colorTextGray"
+            android:textSize="@dimen/text_medium"
+            app:textViewFontAssetName="@string/font_regular"
+            tool:text="Câu hỏi 01" />
+
+        <ImageView
+            android:id="@+id/imgCheck"
+            android:layout_width="@dimen/icon_tiny"
+            android:layout_height="@dimen/icon_tiny"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/margin_content"
+            android:layout_marginRight="@dimen/margin_content"
+            app:srcCompat="@drawable/ic_check" />
+
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/viewLine"
+        style="@style/line" />
+</LinearLayout>

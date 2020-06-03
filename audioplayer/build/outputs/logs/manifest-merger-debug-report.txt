@@ -1,0 +1,43 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Projects\McBooks\sourcecode\mcb686-android\mcbooks\audioplayer\src\main\AndroidManifest.xml:1:1-15:12
+INJECTED from C:\Projects\McBooks\sourcecode\mcb686-android\mcbooks\audioplayer\src\main\AndroidManifest.xml:1:1-15:12
+INJECTED from C:\Projects\McBooks\sourcecode\mcb686-android\mcbooks\audioplayer\src\main\AndroidManifest.xml:1:1-15:12
+	package
+		ADDED from C:\Projects\McBooks\sourcecode\mcb686-android\mcbooks\audioplayer\src\main\AndroidManifest.xml:2:5-45
+		INJECTED from C:\Projects\McBooks\sourcecode\mcb686-android\mcbooks\audioplayer\src\main\AndroidManifest.xml
+		INJECTED from C:\Projects\McBooks\sourcecode\mcb686-android\mcbooks\audioplayer\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Projects\McBooks\sourcecode\mcb686-android\mcbooks\audioplayer\src\main\AndroidManifest.xml:1:11-69
+application
+ADDED from C:\Projects\McBooks\sourcecode\mcb686-android\mcbooks\audioplayer\src\main\AndroidManifest.xml:4:5-13:19
+receiver#com.halilibo.betteraudioplayer.receiver.CallReceiver
+ADDED from C:\Projects\McBooks\sourcecode\mcb686-android\mcbooks\audioplayer\src\main\AndroidManifest.xml:5:9-12:20
+	android:name
+		ADDED from C:\Projects\McBooks\sourcecode\mcb686-android\mcbooks\audioplayer\src\main\AndroidManifest.xml:5:19-56
+intent-filter#action:name:android.intent.action.PHONE_STATE
+ADDED from C:\Projects\McBooks\sourcecode\mcb686-android\mcbooks\audioplayer\src\main\AndroidManifest.xml:6:13-8:29
+action#android.intent.action.PHONE_STATE
+ADDED from C:\Projects\McBooks\sourcecode\mcb686-android\mcbooks\audioplayer\src\main\AndroidManifest.xml:7:17-76
+	android:name
+		ADDED from C:\Projects\McBooks\sourcecode\mcb686-android\mcbooks\audioplayer\src\main\AndroidManifest.xml:7:25-73
+intent-filter#action:name:android.intent.action.NEW_OUTGOING_CALL
+ADDED from C:\Projects\McBooks\sourcecode\mcb686-android\mcbooks\audioplayer\src\main\AndroidManifest.xml:9:13-11:29
+action#android.intent.action.NEW_OUTGOING_CALL
+ADDED from C:\Projects\McBooks\sourcecode\mcb686-android\mcbooks\audioplayer\src\main\AndroidManifest.xml:10:17-82
+	android:name
+		ADDED from C:\Projects\McBooks\sourcecode\mcb686-android\mcbooks\audioplayer\src\main\AndroidManifest.xml:10:25-79
+uses-sdk
+INJECTED from C:\Projects\McBooks\sourcecode\mcb686-android\mcbooks\audioplayer\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Projects\McBooks\sourcecode\mcb686-android\mcbooks\audioplayer\src\main\AndroidManifest.xml
+INJECTED from C:\Projects\McBooks\sourcecode\mcb686-android\mcbooks\audioplayer\src\main\AndroidManifest.xml
+INJECTED from C:\Projects\McBooks\sourcecode\mcb686-android\mcbooks\audioplayer\src\main\AndroidManifest.xml
+INJECTED from C:\Projects\McBooks\sourcecode\mcb686-android\mcbooks\audioplayer\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from C:\Projects\McBooks\sourcecode\mcb686-android\mcbooks\audioplayer\src\main\AndroidManifest.xml
+		ADDED from C:\Projects\McBooks\sourcecode\mcb686-android\mcbooks\audioplayer\src\main\AndroidManifest.xml
+		INJECTED from C:\Projects\McBooks\sourcecode\mcb686-android\mcbooks\audioplayer\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Projects\McBooks\sourcecode\mcb686-android\mcbooks\audioplayer\src\main\AndroidManifest.xml
+		ADDED from C:\Projects\McBooks\sourcecode\mcb686-android\mcbooks\audioplayer\src\main\AndroidManifest.xml
+		INJECTED from C:\Projects\McBooks\sourcecode\mcb686-android\mcbooks\audioplayer\src\main\AndroidManifest.xml

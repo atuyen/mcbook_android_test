@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:id="@+id/llRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.bon.customview.textview.ExtTextView
+            android:id="@+id/txtQuestion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/margin_layout"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/colorTextGray"
+            android:textSize="@dimen/text_title"
+            app:textViewFontAssetName="@string/font_bold"
+            tool:text="Câu 1 " />
+
+        <ImageView
+            android:id="@+id/imgCheckAnswer"
+            android:layout_width="@dimen/icon_tiny"
+            android:layout_height="@dimen/icon_tiny"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/margin_content"
+            android:layout_marginRight="@dimen/margin_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_check_green"
+            android:visibility="gone"
+            tool:visibility="visible" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/viewLine"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorDivider" />
+
+</LinearLayout>

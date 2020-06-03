@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_dialog"
+        android:background="#fff">
+
+        <com.mc.customizes.circlePageIndicator.ViewPagerIndicator
+            android:id="@+id/pager_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:animationDurationPager="100"
+            app:animationScale="1.4"
+            app:deselectedDrawable="@drawable/custom_circle_un_selected"
+            app:enableAnimation="true"
+            app:indicatorSpacing="10dp"
+            app:selectedDrawable="@drawable/custom_circle_selected" />
+
+        <Button
+            android:id="@+id/btnIgnore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/margin_large"
+            android:layout_toRightOf="@id/pager_indicator"
+            android:background="@null"
+            android:text="@string/button_ignore"
+            android:textAllCaps="false"
+            android:textColor="@color/colorDarkOrange"
+            android:textSize="@dimen/text_title"
+            app:textViewFontAssetName="@string/font_bold"
+            tools:ignore="MissingPrefix" />
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_indicator"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="@dimen/padding_layout">
+
+    </android.support.v4.view.ViewPager>
+</RelativeLayout>

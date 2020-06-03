@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_content">
+
+        <com.bon.customview.textview.ExtTextView
+            android:id="@+id/txtIndex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/margin_layout"
+            android:textColor="@color/colorTextGray"
+            tool:text="1" />
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgBookAvatar"
+            android:layout_width="@dimen/avatar_small"
+            android:layout_height="@dimen/avatar_small"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_default_avatar"
+            app:civ_border_color="@color/colorWhite"
+            app:civ_border_width="1dp" />
+
+
+        <com.bon.customview.textview.ExtTextView
+            android:id="@+id/txtBookName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/margin_layout"
+            android:layout_weight="1"
+            android:ellipsize="middle"
+            android:singleLine="true"
+            android:textColor="@color/colorTextGray"
+            android:textSize="@dimen/text_medium"
+            app:textViewFontAssetName="@string/font_regular"
+            tool:text="12312312312312312" />
+
+        <com.bon.customview.button.ExtButton
+            android:id="@+id/btnFollow"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="@dimen/padding_layout"
+            android:layout_marginLeft="@dimen/margin_content"
+            android:layout_marginTop="@dimen/padding_content"
+            android:layout_weight="1"
+            android:background="@drawable/bg_btn_white"
+            android:gravity="center"
+            android:textAllCaps="false"
+            android:textColor="@color/colorDarkOrange"
+            android:textSize="@dimen/text_medium" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorWhite" />
+</LinearLayout>

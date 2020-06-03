@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llFAQ"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.bon.customview.textview.ExtTextView
+        android:id="@+id/txtFAQ"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_content"
+        android:layout_marginTop="@dimen/margin_content"
+        android:textColor="@color/colorTextGray"
+        android:textSize="@dimen/text_medium"
+        app:textViewFontAssetName="@string/font_regular" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_line" />
+
+</LinearLayout>

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_layout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_layout"
+            android:background="@drawable/bg_yellow"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_content">
+
+            <com.bon.customview.textview.ExtTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/general"
+                android:textAllCaps="true"
+                android:textColor="@color/colorTextGray"
+                android:textSize="@dimen/text_title"
+                app:textViewFontAssetName="@string/font_bold" />
+
+            <com.bon.customview.textview.ExtTextView
+                android:id="@+id/txtGeneral"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorTextGray"
+                android:textSize="@dimen/text_medium"
+                app:textViewFontAssetName="@string/font_regular"
+                tool:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since... the ... 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum." />
+
+            <com.bon.customview.textview.ExtTextView
+                android:id="@+id/txtReadMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_content"
+                android:text="@string/show_more"
+                android:textColor="@color/colorDarkBlue"
+                android:textSize="@dimen/text_medium"
+                android:visibility="gone"
+                app:textViewFontAssetName="@string/font_regular" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llCommunityBook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/margin_layout"
+            android:background="@drawable/bg_yellow"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/margin_content">
+
+            <ImageView
+                android:layout_width="@dimen/img_book_tab"
+                android:layout_height="@dimen/img_book_tab"
+                android:src="@drawable/ic_community" />
+
+            <com.bon.customview.textview.ExtTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_layout"
+                android:layout_weight="1"
+                android:text="@string/community_book"
+                android:textColor="@color/colorTextGray"
+                android:textSize="@dimen/text_medium"
+                app:textViewFontAssetName="@string/font_bold" />
+
+            <ImageView
+                style="@style/iconSmall"
+                app:srcCompat="@drawable/ic_arrow_right_black" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_layout"
+            android:background="@drawable/bg_yellow"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_content">
+
+            <LinearLayout
+                android:id="@+id/llProgramStudy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <com.bon.customview.textview.ExtTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/programs_study"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorTextGray"
+                    android:textSize="@dimen/text_title"
+                    app:textViewFontAssetName="@string/font_bold" />
+
+                <ImageView
+                    style="@style/iconSmall"
+                    app:srcCompat="@drawable/ic_arrow_right_black" />
+            </LinearLayout>
+
+            <View
+                style="@style/line"
+                android:layout_marginTop="@dimen/margin_content"
+                android:visibility="invisible" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvProgramStudy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.bon.customview.textview.ExtTextView
+                android:id="@+id/txtReadMoreProgramStudy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_layout"
+                android:text="@string/show_more"
+                android:textColor="@color/colorDarkBlue"
+                android:textSize="@dimen/text_medium"
+                android:visibility="gone"
+                app:textViewFontAssetName="@string/font_regular" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_layout"
+            android:background="@drawable/bg_yellow"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_content">
+
+            <com.bon.customview.textview.ExtTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/author"
+                android:textAllCaps="true"
+                android:textColor="@color/colorTextGray"
+                android:textSize="@dimen/text_title"
+                app:textViewFontAssetName="@string/font_bold" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvAuthor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_yellow"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_content">
+
+            <com.bon.customview.textview.ExtTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/related_book"
+                android:textAllCaps="true"
+                android:textColor="@color/colorTextGray"
+                android:textSize="@dimen/text_title"
+                app:textViewFontAssetName="@string/font_bold" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvRelatedBook"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.bon.customview.textview.ExtTextView
+                android:id="@+id/txtReadMoreRelatedBook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_layout"
+                android:text="@string/show_more"
+                android:textColor="@color/colorDarkBlue"
+                android:textSize="@dimen/text_medium"
+                android:visibility="gone"
+                app:textViewFontAssetName="@string/font_regular" />
+
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

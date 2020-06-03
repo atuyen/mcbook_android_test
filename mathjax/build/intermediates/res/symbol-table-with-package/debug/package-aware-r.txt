@@ -1,0 +1,17 @@
+de.timfreiheit.mathjax.android
+attr automaticLinebreaks
+attr blacker
+attr horizontalScrollbarsEnabled
+attr input
+attr minScaleAdjust
+attr output
+attr outputScale
+attr verticalScrollbarsEnabled
+id AsciiMath
+id CommonHTML
+id HTML_CSS
+id MathML
+id NativeMML
+id SVG
+id TeX
+styleable MathJaxView android_gravity automaticLinebreaks blacker horizontalScrollbarsEnabled input minScaleAdjust output outputScale verticalScrollbarsEnabled

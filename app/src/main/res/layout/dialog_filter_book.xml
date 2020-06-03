@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize">
+
+        <ImageView
+            android:id="@+id/imgClose"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/margin_content"
+            android:src="@drawable/ic_close_orange" />
+
+        <TextView
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/margin_layout"
+            android:layout_marginRight="@dimen/margin_layout"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/filter_book"
+            android:textSize="@dimen/text_large" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/margin_content"
+            android:src="@drawable/ic_close_orange"
+            android:visibility="invisible" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_layout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.bon.customview.textview.ExtTextView
+                style="@style/textOrangeDialog"
+                android:text="@string/catalog" />
+
+            <LinearLayout
+                android:id="@+id/llComboboxBook"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:paddingBottom="@dimen/margin_content"
+                android:paddingTop="@dimen/margin_content">
+
+                <com.bon.customview.textview.ExtTextView
+                    android:id="@+id/txtComboboxBook"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="@string/all"
+                    android:textColor="@color/colorTextGray"
+                    android:textSize="@dimen/text_medium" />
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="@dimen/margin_content"
+                    android:layout_marginRight="@dimen/margin_content"
+                    android:src="@drawable/ic_arrow_down" />
+
+            </LinearLayout>
+
+            <View style="@style/underlineGray" />
+
+
+            <com.mc.customizes.GridRadioGroup
+                android:id="@+id/grgBook"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:gridDefaultChecked="1"
+                app:gridNumber="2"
+                app:gridTitle="@string/book" />
+
+            <View style="@style/underlineGray" />
+
+            <com.mc.customizes.GridRadioGroup
+                android:id="@+id/grgTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:gridDefaultChecked="1"
+                app:gridNumber="2"
+                app:gridTitle="@string/time" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.bon.customview.button.ExtButton
+        android:id="@+id/btnContinue"
+        style="@style/buttonContinue"
+        app:buttonFontAssetName="@string/font_bold" />
+
+</LinearLayout>
